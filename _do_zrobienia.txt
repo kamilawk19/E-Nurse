@@ -1,0 +1,19 @@
+15.12.2021 : 	✓ system logowania
+-------------------------------------------------------------------------------------
+DO ZROBIENIA : 
+	• Możliwość edytowania danych przez użytkowników (zamiana banych w BD, na nowe wprowadzone przez użytkownika, popbrane z formularza metodą GET/POST)
+	• Możliwość edytowania danych uczniów
+	• Wybór szkoły, w której pielęgniarka będzie operować na danych
+	
+
+
+PO UZUPEŁNIENIU BAZY DANYMI :
+	• Pobieranie dokumentów z bazy danych dla danej pielęgniarki, wyświetlenie ich.
+	• Wstawienie danych dla nowych dokumentów, zapis do bazy
+	• Edytowanie istniejących dokumentów
+
+	• Eksportowanie dokumentów do .pdf (JS)
+
+	• Przychowywanie powiadomień w BD dla danych uczniów
+	• Wysyłanie wiadomości dla rodziców i uczniów (stworzenie nowej tabeli na wiadomości)
+		
