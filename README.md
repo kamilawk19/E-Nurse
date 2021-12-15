@@ -12,3 +12,7 @@ Technologie: JS, PHP, MySQL, Java, CSS, HTML (do aktualizacji)
 Backend: Jakub Wojciechowski, Mikołaj Mielnikiewicz, Przemek Nosek, Kamila Krzyżaniak
 
 Frontend: Julia Medzińska, Agata Basiak
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Projekt Back-end realizowany w PhpStorm
