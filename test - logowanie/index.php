@@ -1,13 +1,3 @@
-<?php
-	session_start();	
-	
-	//po wejściu na stronę index.php, jeśli jesteśmy zalogowani, przekieruje nas do maina (str głównej)
-	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany'] == true)) 
-	{
-		header('Location: main.php');
-		exit(); // zakończ wykonywanie skryptu - opuszczamy plik index.php
-	}
-?>
 
 <html lang="pl">
 <head>
@@ -28,14 +18,9 @@
 
         <input type="submit" value="Zaloguj się">
     </form>
-	
-	<?php
-		if(isset($_SESSION['blad']))
-		{
-			echo $_SESSION['blad'];
-		}	
-	?>
+
 </body>
+
 </html>
 
 
