@@ -1,5 +1,5 @@
-15.12.2021 : 	✓ system logowania
--------------------------------------------------------------------------------------
+
+
 DO ZROBIENIA : 
 
 	! Wybór szkoły, w której pielęgniarka będzie operować na danych - TUŻ PO ZALOGOWANIU
@@ -24,6 +24,8 @@ PO UZUPEŁNIENIU BAZY DANYMI :
 
 	• Możliwość wysłania powiadomienia do ucznia (Przychowywanie powiadomień w BD dla danych uczniów - pobieranie ich z BD i wyświetlanie po stronie e-dziennika)
 	• Wysyłanie wiadomości dla rodziców i uczniów (stworzenie nowej tabeli na wiadomości - po stronie e-dzinnika i e-nurse: przeglądanie, usuwanie, dodawanie wiadomości)
-		
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 ZROBIONO:
-	• Uzupełnienie danymi bazy e-dziennik
+	✓ system logowania			15.12.2021	Jakub Wojciechowski
+	✓ Uzupełnienie danymi bazy e-dziennik	07.01.2022	Kamila Krzyżaniak
