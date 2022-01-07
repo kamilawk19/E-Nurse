@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 15 Gru 2021, 16:26
+-- Czas generowania: 07 Sty 2022, 19:55
 -- Wersja serwera: 10.4.21-MariaDB
 -- Wersja PHP: 7.3.31
 
@@ -222,6 +222,18 @@ CREATE TABLE `lekarz` (
   `Profesja` varchar(200) COLLATE utf8_polish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
+--
+-- Zrzut danych tabeli `lekarz`
+--
+
+INSERT INTO `lekarz` (`Id_Lekarz`, `Profesja`) VALUES
+(1, 'pediatra'),
+(2, 'kardiolog'),
+(3, 'chirurg dziecięcy'),
+(4, 'laryngolog'),
+(5, 'neurolog'),
+(6, 'anestezjolog');
+
 -- --------------------------------------------------------
 
 --
@@ -233,11 +245,21 @@ CREATE TABLE `nurse` (
   `Imie` varchar(25) COLLATE utf8_polish_ci NOT NULL,
   `Nazwisko` varchar(30) COLLATE utf8_polish_ci NOT NULL,
   `Login` varchar(30) COLLATE utf8_polish_ci NOT NULL,
-  `Haslo` varchar(30) COLLATE utf8_polish_ci NOT NULL,
+  `Haslo` varchar(60) COLLATE utf8_polish_ci NOT NULL,
   `Numer_telefonu` varchar(9) COLLATE utf8_polish_ci NOT NULL,
   `Email` varchar(50) COLLATE utf8_polish_ci NOT NULL,
   `Licencja` varchar(10) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `nurse`
+--
+
+INSERT INTO `nurse` (`Id`, `Imie`, `Nazwisko`, `Login`, `Haslo`, `Numer_telefonu`, `Email`, `Licencja`) VALUES
+(1, 'Adam', 'Wołoszek', 'awoloszek', '$2y$10$pKGyVI8che/JdXx32Rit6OJBvvvtmjWXOqvdYjxm3sOo9qi39RivK', '653582373', 'awoloszek@enurse.pl', '2398840P'),
+(2, 'Katarzyna', 'Mazur', 'kmazur', '$2y$10$3cfTK8eAPJ/0X4/Achh.zeg4cC8EirObO3uRsGRMo0tEfeFoQjZ6G', '536950803', 'kmazur@enurse.pl', '7489671P'),
+(3, 'Gustaw', 'Towarek', 'gtowarek', '$2y$10$82L1Jqwejx31dB3j9znP7ebbcVHLiQ3tSgjXwMh05goZuj55IoeKa', '229664314', 'gtowarek@enurse.pl', '6396456P'),
+(4, 'Lena', 'Dąbrowska', 'ldabrowska', '$2y$10$xQRYxpMSYbJYCw7yJCrbqulg1qzFZBrbawkPVxsM/uuuKW6NvziCi', '120251702', 'ldabrowska@enurse.pl', '7914340P');
 
 -- --------------------------------------------------------
 
@@ -250,6 +272,16 @@ CREATE TABLE `nurse_school` (
   `Nurse_Id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
+--
+-- Zrzut danych tabeli `nurse_school`
+--
+
+INSERT INTO `nurse_school` (`School_Id`, `Nurse_Id`) VALUES
+(1, 1),
+(1, 4),
+(2, 2),
+(2, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -261,6 +293,51 @@ CREATE TABLE `testy_przesiewowe` (
   `Klasa_Przesiewowa` varchar(50) COLLATE utf8_polish_ci DEFAULT NULL,
   `Rodzaj_Przesiewu` varchar(400) COLLATE utf8_polish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `testy_przesiewowe`
+--
+
+INSERT INTO `testy_przesiewowe` (`Id_Przesiewu`, `Klasa_Przesiewowa`, `Rodzaj_Przesiewu`) VALUES
+(1, 'Szkoła podstawowa, Kl. 0', 'Pomiar wysokości'),
+(2, 'Szkoła podstawowa, Kl. 0', 'Pomiar masy ciała'),
+(3, 'Szkoła podstawowa, Kl. 0', 'Cover test'),
+(4, 'Szkoła podstawowa, Kl. 0', 'Test Hirschberga(w kierunku zeza)'),
+(5, 'Szkoła podstawowa, Kl. 0', 'Badanie ostrości wzroku'),
+(6, 'Szkoła podstawowa, Kl. 0', 'Badanie słuchu'),
+(7, 'Szkoła podstawowa, Kl. 0', 'Wykrywanie bocznego skrzywienia kręgosłupa'),
+(8, 'Szkoła podstawowa, Kl. 0', 'Wykrywanie płasko-koślawych stóp'),
+(9, 'Szkoła podstawowa, Kl. 0', 'Wykrywanie koślawości kolan'),
+(10, 'Szkoła podstawowa, Kl. 0', 'Orientacyjne wykrywanie wady wymowy'),
+(11, 'Szkoła podstawowa, Kl. 0', 'Orientacyjne wykrywanie zaburzeń statyki ciała'),
+(12, 'Szkoła podstawowa, Kl. 0', 'Pomiar RR'),
+(13, 'Szkoła podstawowa, Kl. 3', 'Pomiar wysokości'),
+(14, 'Szkoła podstawowa, Kl. 3', 'Pomiar masy ciała'),
+(15, 'Szkoła podstawowa, Kl. 3', 'Badanie ostrości wzroku'),
+(16, 'Szkoła podstawowa, Kl. 3', 'Wykrywanie zaburzeń widzenia barwnego'),
+(17, 'Szkoła podstawowa, Kl. 3', 'Wykrywanie bocznego skrzywienia kręgosłupa'),
+(18, 'Szkoła podstawowa, Kl. 5', 'Pomiar wysokości'),
+(19, 'Szkoła podstawowa, Kl. 5', 'Pomiar masy ciała'),
+(20, 'Szkoła podstawowa, Kl. 5', 'Badanie ostrości wzroku'),
+(21, 'Szkoła podstawowa, Kl. 5', 'Wykrywanie zaburzeń widzenia barwnego'),
+(22, 'Szkoła podstawowa, Kl. 5', 'Wykrywanie bocznego skrzywienia kręgosłupa'),
+(23, 'Szkoła podstawowa, Kl. 7', 'Pomiar wysokości'),
+(24, 'Szkoła podstawowa, Kl. 7', 'Pomiar masy ciała'),
+(25, 'Szkoła podstawowa, Kl. 7', 'Badanie ostrości wzroku'),
+(26, 'Szkoła podstawowa, Kl. 7', 'Badanie słuchu'),
+(27, 'Szkoła podstawowa, Kl. 7', 'Wykrywanie bocznego skrzywienia kręgosłupa'),
+(28, 'Szkoła podstawowa, Kl. 7', 'Wykrywanie nadmiernej kifozy'),
+(29, 'Szkoła podstawowa, Kl. 7', 'Pomiar RR'),
+(30, 'Szkoła Ponadpodstawowa, Kl. 1', 'Pomiar wysokości'),
+(31, 'Szkoła Ponadpodstawowa, Kl. 1', 'Pomiar masy ciała'),
+(32, 'Szkoła Ponadpodstawowa, Kl. 1', 'Badanie ostrości wzroku'),
+(33, 'Szkoła Ponadpodstawowa, Kl. 1', 'Wykrywanie bocznego skrzywienia kręgosłupa'),
+(34, 'Szkoła Ponadpodstawowa, Kl. 1', 'Wykrywanie nadmiernej kifozy'),
+(35, 'Szkoła Ponadpodstawowa, Kl. 1', 'Pomiar RR'),
+(36, 'Szkoła Ponadpodstawowa, Kl. ostatnia', 'Pomiar wysokości'),
+(37, 'Szkoła Ponadpodstawowa, Kl. ostatnia', 'Pomiar masy ciała'),
+(38, 'Szkoła Ponadpodstawowa, Kl. ostatnia', 'Badanie ostrości wzroku'),
+(39, 'Szkoła Ponadpodstawowa, Kl. ostatnia', 'Pomiar RR');
 
 -- --------------------------------------------------------
 
@@ -488,19 +565,19 @@ ALTER TABLE `kzu_wzrok`
 -- AUTO_INCREMENT dla tabeli `lekarz`
 --
 ALTER TABLE `lekarz`
-  MODIFY `Id_Lekarz` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Lekarz` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT dla tabeli `nurse`
 --
 ALTER TABLE `nurse`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `testy_przesiewowe`
 --
 ALTER TABLE `testy_przesiewowe`
-  MODIFY `Id_Przesiewu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Przesiewu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- Ograniczenia dla zrzutów tabel
