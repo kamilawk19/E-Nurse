@@ -1,0 +1,9 @@
+2 szkoły
+4 pięlęgniarki: po 2 na 1 szkołe
+podstawówka: 8 klas po 7 uczniow
+liceum: 4 klasy po 7 uczniow
+//mysql nie ma supportu do relacji 1:1, więc musiałam zrobić tabelę address_school i parent_student
+
+//info
+pasy dla admina w edzieniku są w tabeli user (UserType=A)
+do sprawdzania haseł z hashem proszę korzystać z password_verify()
