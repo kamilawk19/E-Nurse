@@ -12,7 +12,7 @@ DO ZROBIENIA :
 	• Podstrona z widokiem home page (Mikołaj)
 
 	• Podstrona z widokiem wszystkich klas 				       (Kuba)
-	• Podstrona z widokiem wybranej klasy (będzie ich tyle ile jest klas)  (Kuba)
+	• Podstrona z widokiem wybranej klasy (będzie ich tyle ile jest klas - JEDNAK NIE.... debil)  (Kuba)
 	
 	• Podstrona z widokiem informacji o danym uczniu
 	• Podstrona z widokiem dodania badania, do konkretnego ucznia
