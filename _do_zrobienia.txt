@@ -2,7 +2,7 @@
 
 DO ZROBIENIA : 
 
-	! Wybór szkoły, w której pielęgniarka będzie operować na danych - TUŻ PO ZALOGOWANIU
+	! Wybór szkoły, w której pielęgniarka będzie operować na danych - TUŻ PO ZALOGOWANIU (Mikołaj)
 	+-(extra) Wyświetlanie samouczka po pierwszym logowaniu (...)
 	+-(extra) Podstrona z wiadomościami
 	• (extra) Podstrona z widokiem resetowania hasła
