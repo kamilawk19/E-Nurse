@@ -22,7 +22,7 @@
 <body>
 
     <?php	
-		echo "<p>Witaj ".$_SESSION['username'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
+		echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 	?>	
 	
 	<div id="container">

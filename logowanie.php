@@ -29,7 +29,16 @@ else
     $haslo = $_POST['haslo'];
 
     $login = htmlentities($login, ENT_QUOTES, "UTF-8"); //zabezpieczenie przed wstrzykiwaniem sql
-    $haslo = htmlentities($haslo, ENT_QUOTES, "UTF-8");
+    
+	//$haslo_hash = password_hash($haslo, PASSWORD_DEFAULT);
+	$haslo_hash = password_hash($haslo, PASSWORD_BCRYPT);
+	
+	
+	
+	
+	//echo "$haslo_hash";
+	
+	/*$haslo = htmlentities($haslo, ENT_QUOTES, "UTF-8");*/
 
     /*echo "login = $login";
     echo "haslo = $haslo";*/
@@ -42,52 +51,67 @@ else
 
     //if($result = $conn->query($sql))
     //if($result = @$conn->query($sql)) 
-    if($result = @$conn->query(sprintf("SELECT * FROM user WHERE username='%s' AND password='%s'", mysqli_real_escape_string($conn, $login), mysqli_real_escape_string($conn, $haslo)))) 
+    if($result = @$conn->query(sprintf("SELECT * FROM nurse WHERE Login='%s'", mysqli_real_escape_string($conn, $login)))) 
     {
-        /*echo "tak";*/
+        //echo "tak";
+		//exit();
 
         $users_number = $result->num_rows;
 		
 		if($users_number>0)
 		{
-			//$users_number = $result->num_rows;
-			//$result->num_rows;
-
-			/*echo "results - num rows =".$users_number;*/
-
-			//if($users_number>0)
-			/*if($result != false && $result->num_rows>0)
-			{*/
-		
-			$_SESSION['zalogowany'] = true;		
-			
 			$row = $result->fetch_assoc();
-
-			$_SESSION['username'] = $row['username'];
-			$_SESSION['password'] = $row['password'];
-
-			//echo "Udało ci się zalogować :) <br>";
-			//echo "username = $username <br>";
-			//echo "password = $password";
 			
-			unset($_SESSION['blad']);		
+			// weryfikacja hasha :
+			
+			if(password_verify($haslo, $row['Haslo']))
+			{				
+				//echo "true";
+				//exit();
+				//$users_number = $result->num_rows;
+				//$result->num_rows;
 
-			$result->free_result(); // close(); free(); ... free_result();*/
-			//}
-		
-			header('Location: main.php'); // przekieruj do strony głównej (main) po zalogowaniu
-		
+				/*echo "results - num rows =".$users_number;*/
+
+				//if($users_number>0)
+				/*if($result != false && $result->num_rows>0)
+				{*/
+			
+				$_SESSION['zalogowany'] = true;		
+				
+				
+				//$_SESSION['username'] = $row['Imie'];
+				//$_SESSION['password'] = $row['password'];
+				
+				$_SESSION['imie'] = $row['Imie'];
+				$_SESSION['nazwisko'] = $row['Nazwisko'];
+
+				//echo "Udało ci się zalogować :) <br>";
+				//echo "imie = ".$_SESSION['imie']."<br>";
+				//echo "nazwisko = ".$_SESSION['nazwisko']."<br>";
+				
+				unset($_SESSION['blad']);		
+
+				$result->free_result(); // close(); free(); ... free_result();*/
+				//}
+			
+				header('Location: main.php'); // przekieruj do strony głównej (main) po zalogowaniu
+			}
+			
+			else // // dobry login, złe hasło
+			{				
+				$_SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';
+				header('Location: index.php');				
+			}				
 		}
 		
-		else // gdy podano niepoprawne dane
-		{
-			echo "Zły login lub hasło";
-			
+		else 
+		{ // zły login, (obojętnie jakie hasło ...)
+				
+			$_SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';	
 			header('Location: index.php');
-			
-			
-			
-		}        
+				
+		}       
     }
 	
 	$conn->close();

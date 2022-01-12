@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title></title>
+    <title>E-nurse</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,9 +22,9 @@
 
     <form action="logowanie.php" method="post">
         Login:
-            <br><input typ="text" name="login"><br>
+            <br><input type="text" name="login"><br>
         Hasło:
-        <br><input typ="password" name="haslo"><br><br>
+			<br><input type="password" name="haslo"><br><br>
 
         <input type="submit" value="Zaloguj się">
     </form>
