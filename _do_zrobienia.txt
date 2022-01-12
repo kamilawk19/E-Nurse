@@ -3,29 +3,57 @@
 DO ZROBIENIA : 
 
 	! Wybór szkoły, w której pielęgniarka będzie operować na danych - TUŻ PO ZALOGOWANIU
-	! Wyświetlanie samouczka po pierszym logowaniu (...)
+	+-(extra) Wyświetlanie samouczka po pierwszym logowaniu (...)
+	+-(extra) Podstrona z wiadomościami
+	• (extra) Podstrona z widokiem resetowania hasła
+	• (extra) Podstrona z kalendarzem
+	• (extra) Tworzenie automatyczne back-up (generowanie pliku z danymi z bazy danych)
 
-	• Możliwość otworzenia widoku klasy
-	• -----------||------- widoku dziennika codziennego
+	• Podstrona z widokiem home page
+
+	• Podstrona z widokiem wszystkich klas
+	• Podstrona z widokiem wybranej klasy
+	
+	• Podstrona z widokiem informacji o danym uczniu
+	• Podstrona z widokiem dodania badania, do konkretnego ucznia
+
+	• Podstrona z wysłaniem masowych powiadomień na email
+	• Podstrona z wysłaniem masowych powiadomień na edziennik
+
+	• Podstrona z widokiem wpisów dziennika codziennego
+	• Podstrona z widokiem dodania wpisu dziennika codziennego
+	• Podstrona z widokiem usunięcia wpisu dziennika codziennego
+	• Podstrona z widokiem edycji wpisu dziennika codziennego
+	
+	• Podstrona z widokiem badania przesiewowego konkretnego ucznia
+	• Podstrona z widokiem dodania badania przesiewowego konkretnego ucznia
+	• Podstrona z widokiem edycji badania przesiewowego konkretnego ucznia
 
 	• Możliwość edytowania danych przez użytkowników (...zamiana banych w BD, na nowe wprowadzone przez użytkownika, popbrane z formularza metodą GET/POST)
 	• Możliwość edytowania danych uczniów
 	
-	• ✓ Uzupełnienie danymi bazy e-nurse 
-	• Zrobienie widoków w bazie e-dziennik
-	• Zrobienie widoków w bazie e-nurse
-
-PO UZUPEŁNIENIU BAZY DANYMI :
-	• Pobieranie dokumentów z bazy danych dla danej pielęgniarki, wyświetlenie ich.
-	• Wstawienie danych dla nowych dokumentów, zapis do bazy
-	• Edytowanie istniejących dokumentów
-
-	• Eksportowanie dokumentów do .pdf (JS)
-
+	• Podstrona z generowaniem pliku z kzu i dziennika codzinnego
+	
+	• Uzupełnienie danymi bazy e-nurse (Kamila)
+	• Zrobienie widoków w bazie e-dziennik (Kamila)
+	• Zrobienie widoków w bazie e-nurse (Kamila)
+	
+	Side note
 	• ! Możliwość wysłania powiadomienia do ucznia (Przychowywanie powiadomień w BD dla danych uczniów - pobieranie ich z BD i wyświetlanie po stronie e-dziennika)
 	• Wysyłanie wiadomości dla rodziców i uczniów (stworzenie nowej tabeli na wiadomości - po stronie e-dzinnika i e-nurse: przeglądanie, usuwanie, dodawanie wiadomości)
 
+GENEROWANIE I POBIERANIE DOKUMENTÓW :
+	• Generowanie dokumentu z kzu z bazy danych dla danej pielęgniarki
+	• Pobieranie dokumentu z kzu z bazy danych dla danej pielęgniarki
+	
+	• Generowanie dokumentu z dziennika codziennego z bazy danych dla danej pielęgniarki
+	• Pobieranie dokumentu z dziennika codziennego z bazy danych dla danej pielęgniarki
+	
+	• (extra) Wyświetlenie dokumentu w przeglądarce
+	
+	• Eksportowanie dokumentów do .pdf (JS)
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 ZROBIONO:
-	✓ system logowania			15.12.2021	Jakub Wojciechowski
+	✓ System Logowania			15.12.2021	Jakub Wojciechowski
 	✓ Uzupełnienie danymi bazy e-dziennik	07.01.2022	Kamila Krzyżaniak
