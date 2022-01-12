@@ -38,6 +38,8 @@ DO ZROBIENIA :
 	• Zrobienie widoków w bazie e-dziennik (Kamila)
 	• Zrobienie widoków w bazie e-nurse (Kamila)
 	
+	• Dodanie baz danych do 000webhost (Kamila)
+	
 	Side note
 	• ! Możliwość wysłania powiadomienia do ucznia (Przychowywanie powiadomień w BD dla danych uczniów - pobieranie ich z BD i wyświetlanie po stronie e-dziennika)
 	• Wysyłanie wiadomości dla rodziców i uczniów (stworzenie nowej tabeli na wiadomości - po stronie e-dzinnika i e-nurse: przeglądanie, usuwanie, dodawanie wiadomości)
