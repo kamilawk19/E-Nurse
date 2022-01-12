@@ -9,7 +9,7 @@ DO ZROBIENIA :
 	• (extra) Podstrona z kalendarzem
 	• (extra) Tworzenie automatyczne back-up (generowanie pliku z danymi z bazy danych)
 
-	• Podstrona z widokiem home page
+	• Podstrona z widokiem home page (Mikołaj)
 
 	• Podstrona z widokiem wszystkich klas
 	• Podstrona z widokiem wybranej klasy
