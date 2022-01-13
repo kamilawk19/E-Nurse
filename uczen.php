@@ -521,13 +521,13 @@
 					$kzu_wf_grupa = $row['Grupa'];
 					$kzu_wf_zalecenia = $row['Zalecenia'];			
 				}				
-				/*else 
+				else 
 				{ // nie znaleziono rekordów w bd
 						
 										//$_SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';	
 										//header('Location: index.php');
-					echo "brak danych do wyświetlenia";						
-				}   */			
+					echo "[ brak ]";						
+				}   		
 			}	
 			
 			/*echo "<br><b>Kwalifikacja do wychowania fizycznego : </b><br>";

@@ -38,6 +38,8 @@
 		
 		echo ' <a href="klasy.php?school_id='.$x.' ">Klasy</a>';
 		
+		echo ' <a href="dziennik.php?school_id='.$x.' ">Dziennik codzienny</a>';
+		
 		
 		
 		
