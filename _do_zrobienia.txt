@@ -57,6 +57,6 @@ GENEROWANIE I POBIERANIE DOKUMENTÓW :
 ZROBIONO:
 	✓ System Logowania			15.12.2021	Jakub Wojciechowski
 	✓ Uzupełnienie danymi bazy e-dziennik	07.01.2022	Kamila Krzyżaniak
-	✓ Dodanie baz danych do 000webhost	13.01.2022	Kamila Krzyżaniak 	Uwaga: Ograniczenie w 000webhost. Nie mogę stworzyć kluczy obcych do tabeli z innej bazy 												danych.
+	✓ Dodanie baz danych do 000webhost	13.01.2022	Kamila Krzyżaniak 	Uwaga: Ograniczenie w 000webhost. Nie mogę stworzyć kluczy obcych do tabeli z innej bazy danych.
 	
 	
