@@ -20,6 +20,9 @@
 
 <body>
 
+	<p>Zaloguj się do systemu E-nurse</p>
+
+
     <form action="logowanie.php" method="post">
         Login:
             <br><input type="text" name="login"><br>

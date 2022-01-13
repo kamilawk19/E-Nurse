@@ -3,9 +3,9 @@
 	
 	session_start();
 	
-	if(!isset($_SESSION['zalogowany'])) // jeśli wejdziemy na stronę główną a nie jesteśmy zalogowani ....
+	if(!isset($_SESSION['zalogowany']))
 	{
-		header('Location: index.php'); // wypierdalaj na index.php
+		header('Location: index.php'); 
 		exit();
 	}
 ?>
@@ -15,7 +15,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>E-nurse - strona główna</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+
+		
 </head>
 
 
@@ -23,7 +25,58 @@
 
     <?php	
 		echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
+		
+		$x = $_GET['school_id'];
+		
+		//echo $x;
+		
+		echo "Wybrałeś szkołę o id =" . $x . " ";
+		
+		// dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
+		
+		echo '<br><a href="main.php?school_id='.$x.' ">Strona główna</a>';
+		
+		echo ' <a href="klasy.php?school_id='.$x.' ">Klasy</a>';
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	?>	
+	
+	
+	
+	
+	
 	
 	<div id="container">
 		<div id="header">
