@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class NoPesel {
+public class NoPesel { // https://www.baeldung.com/jpa-one-to-one 4.2
     @Id
     @Column(name = "student_id")
     private Long id;
