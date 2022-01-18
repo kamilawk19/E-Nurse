@@ -15,7 +15,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>E-nurse - strona główna</title>
-    <link rel="stylesheet" href="style1.css">		
+    <link rel="stylesheet" href="style.css">		
 </head>
 <body>
 
@@ -28,37 +28,49 @@
 		
 		echo "Wybrałeś szkołę o id =" . $x . " ";
 		
-		// dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
-		
-		echo '<br><a href="main.php?school_id='.$x.' ">Strona główna</a>';
+			// dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
+			
+		/*echo '<br><a href="main.php?school_id='.$x.' ">Strona główna</a>';
 		
 		echo ' <a href="klasy.php?school_id='.$x.' ">Klasy</a>';
 		
-		echo ' <a href="dziennik.php?school_id='.$x.' ">Dziennik codzienny</a>';
+		echo ' <a href="dziennik.php?school_id='.$x.' ">Dziennik codzienny</a>';*/
 	?>	
 	
 	<div id="container">
+	
 		<div id="header">
-		
-		
-		</div>	
-		
-		<div id="nav">
-		
+			header		
 		
 		</div>	
-		<div id="left">
 		
-		
+		<div id="nav">			
+			
+			<?php
+				echo '<a href="main.php?school_id='.$x.' ">Strona główna</a><br>';
+				echo '<a href="klasy.php?school_id='.$x.' ">Klasy</a><br>';
+				echo '<a href="dziennik.php?school_id='.$x.' ">Dziennik codzienny</a><br>';
+			?>
+			
+			
+			
 		</div>	
+		
+		<!--<div id="left">
+			left
+		
+		</div>-->
+		
 		<div id="content">
+			content
 		
-		
+			
 		</div>	
-		<div id="footer">
 		
+		<div id="footer">	
+			footer		
+		</div>	
 		
-		</div>		
 	</div>
 </body>
 </html>

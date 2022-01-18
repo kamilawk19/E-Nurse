@@ -67,7 +67,7 @@
 		}		
 	?>
 	
-	<div id="container">
+	<!--<div id="container">
 		<div id="header">
 		
 		
@@ -89,7 +89,7 @@
 		
 		
 		</div>		
-	</div>
+	</div>-->
 </body>
 </html>
 

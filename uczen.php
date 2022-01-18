@@ -23,6 +23,44 @@
     <?php	
 		echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 		
+		$school_id = $_GET['school_id'];		
+		
+		echo "Wybrałeś szkołę o id =" . $school_id . " ";
+		
+		// dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
+		
+		/*echo '<br><a href="main.php?school_id='.$school_id.' ">Strona główna</a> ';
+		
+		echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';*/
+		
+		
+	?>	
+	
+	<div id="container">
+	
+		<div id="header">
+			header		
+		
+		</div>	
+		
+		<div id="nav">
+			<?php
+				echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
+				echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';
+				echo '<a href="dziennik.php?school_id='.$school_id.' ">Dziennik codzienny</a><br>';
+			?>
+		
+		</div>	
+		
+		<!--<div id="left">
+			left
+		
+		</div>-->
+		
+		<div id="content">
+			 <?php	
+		echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
+		
 		$class_id = $_GET['class_id'];
 		$school_id = $_GET['school_id'];
 		$student_id = $_GET['student_id'];		
@@ -224,30 +262,14 @@
 			$conn->close();				
 		}				
 	?>	
-	
-	<div id="container">
-	test
-		<div id="header">
 		
-		
+			
 		</div>	
 		
-		<div id="nav">
-		
-		
+		<div id="footer">	
+			footer		
 		</div>	
-		<div id="left">
 		
-		
-		</div>	
-		<div id="content">
-		
-		
-		</div>	
-		<div id="footer">
-		
-		
-		</div>		
 	</div>
 </body>
 </html>
