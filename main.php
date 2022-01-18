@@ -15,12 +15,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>E-nurse - strona główna</title>
-    <link rel="stylesheet" href="style1.css">
-
-		
+    <link rel="stylesheet" href="style1.css">		
 </head>
-
-
 <body>
 
     <?php	
@@ -39,46 +35,7 @@
 		echo ' <a href="klasy.php?school_id='.$x.' ">Klasy</a>';
 		
 		echo ' <a href="dziennik.php?school_id='.$x.' ">Dziennik codzienny</a>';
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	?>	
-	
-	
-	
-	
-	
 	
 	<div id="container">
 		<div id="header">
