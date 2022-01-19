@@ -279,286 +279,1381 @@ foreach($choroby as $ch){
 
     //kzu_cisnienie_tetnicze_krwi
     //klasy:0,3,5,7,1,4
-    /*for($i=1;$i<=91;$i++){
+
+    /*function klasa0(&$skurczowe, &$rozkurczowe, &$centyl){
+        $skurczowe=rand(83,124);
+        $rozkurczowe=rand(43,77);
+        if($skurczowe>=83 && $skurczowe<=88){
+            $centyl=rand(1,5)."/";
+        }elseif($skurczowe>88 && $skurczowe<=91){
+            $centyl=rand(5,10)."/";
+        }elseif($skurczowe>91 && $skurczowe<=96){
+            $centyl=rand(10,25)."/";
+        }elseif($skurczowe>96 && $skurczowe<=101){
+           $centyl=rand(25,50)."/";
+        }elseif($skurczowe>101 && $skurczowe<=107){
+            $centyl=rand(50,75)."/";
+        }elseif($skurczowe>107 && $skurczowe<=113){
+            $centyl=rand(75,90)."/";
+        }elseif($skurczowe>113 && $skurczowe<=117){
+            $centyl=rand(90,95)."/";
+        }elseif($skurczowe>117 && $skurczowe<=124){
+            $centyl=rand(95,99)."/";
+        }
+
+        if($rozkurczowe>=43 && $rozkurczowe<=47){
+            $centyl=$centyl.rand(1,5);
+        }elseif($rozkurczowe>47 && $rozkurczowe<=50){
+           $centyl=$centyl.rand(25,50);
+        }elseif($rozkurczowe>50 && $rozkurczowe<=54){
+            $centyl=$centyl.rand(50,75);
+        }elseif($rozkurczowe>54 && $rozkurczowe<=59){
+            $centyl=$centyl.rand(75,90);
+        }elseif($rozkurczowe>59 && $rozkurczowe<=64){
+            $centyl=$centyl.rand(90,95);
+        }elseif($rozkurczowe>64 && $rozkurczowe<=68){
+            $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>68 && $rozkurczowe<=71){
+             $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>71 && $rozkurczowe<=77){
+             $centyl=$centyl.rand(95,99);
+        }
+    }
+
+    function klasa3(&$skurczowe, &$rozkurczowe, &$centyl){
+        $skurczowe=rand(85,126);
+        $rozkurczowe=rand(44,78);
+        if($skurczowe>=85 && $skurczowe<=90){
+            $centyl=rand(1,5)."/";
+        }elseif($skurczowe>90 && $skurczowe<=93){
+            $centyl=rand(5,10)."/";
+        }elseif($skurczowe>93 && $skurczowe<=98){
+            $centyl=rand(10,25)."/";
+        }elseif($skurczowe>98 && $skurczowe<=103){
+           $centyl=rand(25,50)."/";
+        }elseif($skurczowe>103 && $skurczowe<=110){
+            $centyl=rand(50,75)."/";
+        }elseif($skurczowe>110 && $skurczowe<=116){
+            $centyl=rand(75,90)."/";
+        }elseif($skurczowe>116 && $skurczowe<=119){
+            $centyl=rand(90,95)."/";
+        }elseif($skurczowe>119 && $skurczowe<=126){
+            $centyl=rand(95,99)."/";
+        }
+
+        if($rozkurczowe>=44 && $rozkurczowe<=49){
+            $centyl=$centyl.rand(1,5);
+        }elseif($rozkurczowe>49 && $rozkurczowe<=51){
+           $centyl=$centyl.rand(25,50);
+        }elseif($rozkurczowe>51 && $rozkurczowe<=55){
+            $centyl=$centyl.rand(50,75);
+        }elseif($rozkurczowe>55 && $rozkurczowe<=60){
+            $centyl=$centyl.rand(75,90);
+        }elseif($rozkurczowe>60 && $rozkurczowe<=65){
+            $centyl=$centyl.rand(90,95);
+        }elseif($rozkurczowe>65 && $rozkurczowe<=70){
+            $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>70 && $rozkurczowe<=73){
+             $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>73 && $rozkurczowe<=78){
+             $centyl=$centyl.rand(95,99);
+        }
+    }
+
+    function klasa5(&$skurczowe, &$rozkurczowe, &$centyl){
+        $skurczowe=rand(86,129);
+        $rozkurczowe=rand(45,79);
+
+        if($skurczowe>=86 && $skurczowe<=92){
+            $centyl=rand(1,5)."/";
+        }elseif($skurczowe>92 && $skurczowe<=95){
+            $centyl=rand(5,10)."/";
+        }elseif($skurczowe>95 && $skurczowe<=100){
+            $centyl=rand(10,25)."/";
+        }elseif($skurczowe>100 && $skurczowe<=106){
+           $centyl=rand(25,50)."/";
+        }elseif($skurczowe>106 && $skurczowe<=112){
+            $centyl=rand(50,75)."/";
+        }elseif($skurczowe>112 && $skurczowe<=118){
+            $centyl=rand(75,90)."/";
+        }elseif($skurczowe>118 && $skurczowe<=122){
+            $centyl=rand(90,95)."/";
+        }elseif($skurczowe>122 && $skurczowe<=129){
+            $centyl=rand(95,99)."/";
+        }
+
+        if($rozkurczowe>=45 && $rozkurczowe<=49){
+            $centyl=$centyl.rand(1,5);
+        }elseif($rozkurczowe>49 && $rozkurczowe<=52){
+           $centyl=$centyl.rand(25,50);
+        }elseif($rozkurczowe>52 && $rozkurczowe<=56){
+            $centyl=$centyl.rand(50,75);
+        }elseif($rozkurczowe>56 && $rozkurczowe<=61){
+            $centyl=$centyl.rand(75,90);
+        }elseif($rozkurczowe>61 && $rozkurczowe<=66){
+            $centyl=$centyl.rand(90,95);
+        }elseif($rozkurczowe>66 && $rozkurczowe<=71){
+            $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>71 && $rozkurczowe<=74){
+             $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>74 && $rozkurczowe<=79){
+             $centyl=$centyl.rand(95,99);
+        }
+    }
+
+    function klasa7(&$skurczowe, &$rozkurczowe, &$centyl){
+        $skurczowe=rand(89,135);
+        $rozkurczowe=rand(46,81);
+
+        if($skurczowe>=89 && $skurczowe<=95){
+            $centyl=rand(1,5)."/";
+        }elseif($skurczowe>95 && $skurczowe<=98){
+            $centyl=rand(5,10)."/";
+        }elseif($skurczowe>98 && $skurczowe<=104){
+            $centyl=rand(10,25)."/";
+        }elseif($skurczowe>104 && $skurczowe<=110){
+           $centyl=rand(25,50)."/";
+        }elseif($skurczowe>110 && $skurczowe<=117){
+            $centyl=rand(50,75)."/";
+        }elseif($skurczowe>117 && $skurczowe<=123){
+            $centyl=rand(75,90)."/";
+        }elseif($skurczowe>123 && $skurczowe<=127){
+            $centyl=rand(90,95)."/";
+        }elseif($skurczowe>127 && $skurczowe<=135){
+            $centyl=rand(95,99)."/";
+        }
+
+        if($rozkurczowe>=46 && $rozkurczowe<=50){
+            $centyl=$centyl.rand(1,5);
+        }elseif($rozkurczowe>50 && $rozkurczowe<=53){
+           $centyl=$centyl.rand(25,50);
+        }elseif($rozkurczowe>53 && $rozkurczowe<=57){
+            $centyl=$centyl.rand(50,75);
+        }elseif($rozkurczowe>57 && $rozkurczowe<=62){
+            $centyl=$centyl.rand(75,90);
+        }elseif($rozkurczowe>62 && $rozkurczowe<=67){
+            $centyl=$centyl.rand(90,95);
+        }elseif($rozkurczowe>67 && $rozkurczowe<=72){
+            $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>72 && $rozkurczowe<=75){
+             $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>75 && $rozkurczowe<=81){
+             $centyl=$centyl.rand(95,99);
+        }
+    }
+
+    function klasa11(&$skurczowe, &$rozkurczowe, &$centyl){
+        $skurczowe=rand(94,144);
+        $rozkurczowe=rand(47,83);
+
+        if($skurczowe>=94 && $skurczowe<=100){
+            $centyl=rand(1,5)."/";
+        }elseif($skurczowe>100 && $skurczowe<=104){
+            $centyl=rand(5,10)."/";
+        }elseif($skurczowe>104 && $skurczowe<=110){
+            $centyl=rand(10,25)."/";
+        }elseif($skurczowe>110 && $skurczowe<=117){
+           $centyl=rand(25,50)."/";
+        }elseif($skurczowe>117 && $skurczowe<=124){
+            $centyl=rand(50,75)."/";
+        }elseif($skurczowe>124 && $skurczowe<=131){
+            $centyl=rand(75,90)."/";
+        }elseif($skurczowe>131 && $skurczowe<=135){
+            $centyl=rand(90,95)."/";
+        }elseif($skurczowe>135 && $skurczowe<=144){
+            $centyl=rand(95,99)."/";
+        }
+
+        if($rozkurczowe>=47 && $rozkurczowe<=52){
+            $centyl=$centyl.rand(1,5);
+        }elseif($rozkurczowe>52 && $rozkurczowe<=55){
+           $centyl=$centyl.rand(25,50);
+        }elseif($rozkurczowe>55 && $rozkurczowe<=59){
+            $centyl=$centyl.rand(50,75);
+        }elseif($rozkurczowe>59 && $rozkurczowe<=64){
+            $centyl=$centyl.rand(75,90);
+        }elseif($rozkurczowe>64 && $rozkurczowe<=69){
+            $centyl=$centyl.rand(90,95);
+        }elseif($rozkurczowe>69 && $rozkurczowe<=74){
+            $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>74 && $rozkurczowe<=77){
+             $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>77 && $rozkurczowe<=83){
+             $centyl=$centyl.rand(95,99);
+        }
+    }
+
+    function klasa14(&$skurczowe, &$rozkurczowe, &$centyl){
+        $skurczowe=rand(97,150);
+        $rozkurczowe=rand(49,86);
+
+        if($skurczowe>=97 && $skurczowe<=103){
+            $centyl=rand(1,5)."/";
+        }elseif($skurczowe>103 && $skurczowe<=107){
+            $centyl=rand(5,10)."/";
+        }elseif($skurczowe>107 && $skurczowe<=113){
+            $centyl=rand(10,25)."/";
+        }elseif($skurczowe>113 && $skurczowe<=121){
+           $centyl=rand(25,50)."/";
+        }elseif($skurczowe>121 && $skurczowe<=128){
+            $centyl=rand(50,75)."/";
+        }elseif($skurczowe>128 && $skurczowe<=136){
+            $centyl=rand(75,90)."/";
+        }elseif($skurczowe>136 && $skurczowe<=140){
+            $centyl=rand(90,95)."/";
+        }elseif($skurczowe>140 && $skurczowe<=150){
+            $centyl=rand(95,99)."/";
+        }
+
+        if($rozkurczowe>=49 && $rozkurczowe<=54){
+            $centyl=$centyl.rand(1,5);
+        }elseif($rozkurczowe>54 && $rozkurczowe<=56){
+           $centyl=$centyl.rand(25,50);
+        }elseif($rozkurczowe>56 && $rozkurczowe<=61){
+            $centyl=$centyl.rand(50,75);
+        }elseif($rozkurczowe>61 && $rozkurczowe<=66){
+            $centyl=$centyl.rand(75,90);
+        }elseif($rozkurczowe>66 && $rozkurczowe<=72){
+            $centyl=$centyl.rand(90,95);
+        }elseif($rozkurczowe>72 && $rozkurczowe<=77){
+            $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>77 && $rozkurczowe<=80){
+             $centyl=$centyl.rand(95,99);
+        }elseif($rozkurczowe>80 && $rozkurczowe<=86){
+             $centyl=$centyl.rand(95,99);
+        }
+    }
+
+    for($i=1;$i<=91;$i++){
         if($i!=1 && $i!=17){
+            $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+            $result = mysqli_query($conn, $get_karta);
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while($row = mysqli_fetch_assoc($result)) {
+                    $id_ka=$row["id_k"];
+                }
+            }
+
             if($i>=1 && $i<=7){
                 //klasa 0 - wiek:6
-                $skurczowe=rand(83,124);
-                $rozkurczowe=rand(43,77);
-
-                if($skurczowe>=83 && $skurczowe<=88){
-                    $centyl=rand(1,5)."/";
-                }elseif($skurczowe>88 && $skurczowe<=91){
-                    $centyl=rand(5,10)."/";
-                }elseif($skurczowe>91 && $skurczowe<=96){
-                    $centyl=rand(10,25)."/";
-                }elseif($skurczowe>96 && $skurczowe<=101){
-                   $centyl=rand(25,50)."/";
-                }elseif($skurczowe>101 && $skurczowe<=107){
-                    $centyl=rand(50,75)."/";
-                }elseif($skurczowe>107 && $skurczowe<=113){
-                    $centyl=rand(75,90)."/";
-                }elseif($skurczowe>113 && $skurczowe<=117){
-                    $centyl=rand(90,95)."/";
-                }elseif($skurczowe>117 && $skurczowe<=124){
-                    $centyl=rand(95,99)."/";
-                }
-
-                if($rozkurczowe>=43 && $rozkurczowe<=47){
-                    $centyl=$centyl.rand(1,5);
-                }elseif($rozkurczowe>47 && $rozkurczowe<=50){
-                   $centyl=$centyl.rand(25,50);
-                }elseif($rozkurczowe>50 && $rozkurczowe<=54){
-                    $centyl=$centyl.rand(50,75);
-                }elseif($rozkurczowe>54 && $rozkurczowe<=59){
-                    $centyl=$centyl.rand(75,90);
-                }elseif($rozkurczowe>59 && $rozkurczowe<=64){
-                    $centyl=$centyl.rand(90,95);
-                }elseif($rozkurczowe>64 && $rozkurczowe<=68){
-                    $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>68 && $rozkurczowe<=71){
-                     $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>71 && $rozkurczowe<=77){
-                     $centyl=$centyl.rand(95,99);
-                }
-
-            }elseif($i>=22 && $i<=28){
-                //klasa 3 - wiek: 9
-                $skurczowe=rand(85,126);
-                $rozkurczowe=rand(44,78);
-                if($skurczowe>=85 && $skurczowe<=90){
-                    $centyl=rand(1,5)."/";
-                }elseif($skurczowe>90 && $skurczowe<=93){
-                    $centyl=rand(5,10)."/";
-                }elseif($skurczowe>93 && $skurczowe<=98){
-                    $centyl=rand(10,25)."/";
-                }elseif($skurczowe>98 && $skurczowe<=103){
-                   $centyl=rand(25,50)."/";
-                }elseif($skurczowe>103 && $skurczowe<=110){
-                    $centyl=rand(50,75)."/";
-                }elseif($skurczowe>110 && $skurczowe<=116){
-                    $centyl=rand(75,90)."/";
-                }elseif($skurczowe>116 && $skurczowe<=119){
-                    $centyl=rand(90,95)."/";
-                }elseif($skurczowe>119 && $skurczowe<=126){
-                    $centyl=rand(95,99)."/";
-                }
-
-                if($rozkurczowe>=44 && $rozkurczowe<=49){
-                    $centyl=$centyl.rand(1,5);
-                }elseif($rozkurczowe>49 && $rozkurczowe<=51){
-                   $centyl=$centyl.rand(25,50);
-                }elseif($rozkurczowe>51 && $rozkurczowe<=55){
-                    $centyl=$centyl.rand(50,75);
-                }elseif($rozkurczowe>55 && $rozkurczowe<=60){
-                    $centyl=$centyl.rand(75,90);
-                }elseif($rozkurczowe>60 && $rozkurczowe<=65){
-                    $centyl=$centyl.rand(90,95);
-                }elseif($rozkurczowe>65 && $rozkurczowe<=70){
-                    $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>70 && $rozkurczowe<=73){
-                     $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>73 && $rozkurczowe<=78){
-                     $centyl=$centyl.rand(95,99);
-                }
-
-            }elseif($i>=36 && $i<=42){
-                //klasa 5 - wiek: 11
-                $skurczowe=rand(86,129);
-                $rozkurczowe=rand(45,79);
-
-                if($skurczowe>=86 && $skurczowe<=92){
-                    $centyl=rand(1,5)."/";
-                }elseif($skurczowe>92 && $skurczowe<=95){
-                    $centyl=rand(5,10)."/";
-                }elseif($skurczowe>95 && $skurczowe<=100){
-                    $centyl=rand(10,25)."/";
-                }elseif($skurczowe>100 && $skurczowe<=106){
-                   $centyl=rand(25,50)."/";
-                }elseif($skurczowe>106 && $skurczowe<=112){
-                    $centyl=rand(50,75)."/";
-                }elseif($skurczowe>112 && $skurczowe<=118){
-                    $centyl=rand(75,90)."/";
-                }elseif($skurczowe>118 && $skurczowe<=122){
-                    $centyl=rand(90,95)."/";
-                }elseif($skurczowe>122 && $skurczowe<=129){
-                    $centyl=rand(95,99)."/";
-                }
-
-                if($rozkurczowe>=45 && $rozkurczowe<=49){
-                    $centyl=$centyl.rand(1,5);
-                }elseif($rozkurczowe>49 && $rozkurczowe<=52){
-                   $centyl=$centyl.rand(25,50);
-                }elseif($rozkurczowe>52 && $rozkurczowe<=56){
-                    $centyl=$centyl.rand(50,75);
-                }elseif($rozkurczowe>56 && $rozkurczowe<=61){
-                    $centyl=$centyl.rand(75,90);
-                }elseif($rozkurczowe>61 && $rozkurczowe<=66){
-                    $centyl=$centyl.rand(90,95);
-                }elseif($rozkurczowe>66 && $rozkurczowe<=71){
-                    $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>71 && $rozkurczowe<=74){
-                     $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>74 && $rozkurczowe<=79){
-                     $centyl=$centyl.rand(95,99);
-                }
-
-            }elseif($i>=50 && $i<=56){
-                //klasa 7 - wiek: 13
-                $skurczowe=rand(89,135);
-                $rozkurczowe=rand(46,81);
-
-                if($skurczowe>=89 && $skurczowe<=95){
-                    $centyl=rand(1,5)."/";
-                }elseif($skurczowe>95 && $skurczowe<=98){
-                    $centyl=rand(5,10)."/";
-                }elseif($skurczowe>98 && $skurczowe<=104){
-                    $centyl=rand(10,25)."/";
-                }elseif($skurczowe>104 && $skurczowe<=110){
-                   $centyl=rand(25,50)."/";
-                }elseif($skurczowe>110 && $skurczowe<=117){
-                    $centyl=rand(50,75)."/";
-                }elseif($skurczowe>117 && $skurczowe<=123){
-                    $centyl=rand(75,90)."/";
-                }elseif($skurczowe>123 && $skurczowe<=127){
-                    $centyl=rand(90,95)."/";
-                }elseif($skurczowe>127 && $skurczowe<=135){
-                    $centyl=rand(95,99)."/";
-                }
-
-                if($rozkurczowe>=46 && $rozkurczowe<=50){
-                    $centyl=$centyl.rand(1,5);
-                }elseif($rozkurczowe>50 && $rozkurczowe<=53){
-                   $centyl=$centyl.rand(25,50);
-                }elseif($rozkurczowe>53 && $rozkurczowe<=57){
-                    $centyl=$centyl.rand(50,75);
-                }elseif($rozkurczowe>57 && $rozkurczowe<=62){
-                    $centyl=$centyl.rand(75,90);
-                }elseif($rozkurczowe>62 && $rozkurczowe<=67){
-                    $centyl=$centyl.rand(90,95);
-                }elseif($rozkurczowe>67 && $rozkurczowe<=72){
-                    $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>72 && $rozkurczowe<=75){
-                     $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>75 && $rozkurczowe<=81){
-                     $centyl=$centyl.rand(95,99);
-                }
-
-            }elseif($i>=64 && $i<=70){
-                //klasa 1 - wiek: 15
-                $skurczowe=rand(94,144);
-                $rozkurczowe=rand(47,83);
-
-                if($skurczowe>=94 && $skurczowe<=100){
-                    $centyl=rand(1,5)."/";
-                }elseif($skurczowe>100 && $skurczowe<=104){
-                    $centyl=rand(5,10)."/";
-                }elseif($skurczowe>104 && $skurczowe<=110){
-                    $centyl=rand(10,25)."/";
-                }elseif($skurczowe>110 && $skurczowe<=117){
-                   $centyl=rand(25,50)."/";
-                }elseif($skurczowe>117 && $skurczowe<=124){
-                    $centyl=rand(50,75)."/";
-                }elseif($skurczowe>124 && $skurczowe<=131){
-                    $centyl=rand(75,90)."/";
-                }elseif($skurczowe>131 && $skurczowe<=135){
-                    $centyl=rand(90,95)."/";
-                }elseif($skurczowe>135 && $skurczowe<=144){
-                    $centyl=rand(95,99)."/";
-                }
-
-                if($rozkurczowe>=47 && $rozkurczowe<=52){
-                    $centyl=$centyl.rand(1,5);
-                }elseif($rozkurczowe>52 && $rozkurczowe<=55){
-                   $centyl=$centyl.rand(25,50);
-                }elseif($rozkurczowe>55 && $rozkurczowe<=59){
-                    $centyl=$centyl.rand(50,75);
-                }elseif($rozkurczowe>59 && $rozkurczowe<=64){
-                    $centyl=$centyl.rand(75,90);
-                }elseif($rozkurczowe>64 && $rozkurczowe<=69){
-                    $centyl=$centyl.rand(90,95);
-                }elseif($rozkurczowe>69 && $rozkurczowe<=74){
-                    $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>74 && $rozkurczowe<=77){
-                     $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>77 && $rozkurczowe<=83){
-                     $centyl=$centyl.rand(95,99);
-                }
-
-            }elseif($i>=85 && $i<=91){
-                //klasa 4 - wiek: 18
-                $skurczowe=rand(97,150);
-                $rozkurczowe=rand(49,86);
-
-                if($skurczowe>=97 && $skurczowe<=103){
-                    $centyl=rand(1,5)."/";
-                }elseif($skurczowe>103 && $skurczowe<=107){
-                    $centyl=rand(5,10)."/";
-                }elseif($skurczowe>107 && $skurczowe<=113){
-                    $centyl=rand(10,25)."/";
-                }elseif($skurczowe>113 && $skurczowe<=121){
-                   $centyl=rand(25,50)."/";
-                }elseif($skurczowe>121 && $skurczowe<=128){
-                    $centyl=rand(50,75)."/";
-                }elseif($skurczowe>128 && $skurczowe<=136){
-                    $centyl=rand(75,90)."/";
-                }elseif($skurczowe>136 && $skurczowe<=140){
-                    $centyl=rand(90,95)."/";
-                }elseif($skurczowe>140 && $skurczowe<=150){
-                    $centyl=rand(95,99)."/";
-                }
-
-                if($rozkurczowe>=49 && $rozkurczowe<=54){
-                    $centyl=$centyl.rand(1,5);
-                }elseif($rozkurczowe>54 && $rozkurczowe<=56){
-                   $centyl=$centyl.rand(25,50);
-                }elseif($rozkurczowe>56 && $rozkurczowe<=61){
-                    $centyl=$centyl.rand(50,75);
-                }elseif($rozkurczowe>61 && $rozkurczowe<=66){
-                    $centyl=$centyl.rand(75,90);
-                }elseif($rozkurczowe>66 && $rozkurczowe<=72){
-                    $centyl=$centyl.rand(90,95);
-                }elseif($rozkurczowe>72 && $rozkurczowe<=77){
-                    $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>77 && $rozkurczowe<=80){
-                     $centyl=$centyl.rand(95,99);
-                }elseif($rozkurczowe>80 && $rozkurczowe<=86){
-                     $centyl=$centyl.rand(95,99);
-                }
-
-            }else{
+                $data="2022-01-10 20:17:01";
+                $skurczowe=0;
                 $rozkurczowe=0;
-            }
-            if($rozkurczowe!=0){
+                $centyl=0;
+
+                klasa0($skurczowe, $rozkurczowe, $centyl);
                 $wynik=$skurczowe."/".$rozkurczowe;
-                $data="2022-01-10 10:12:04";
-                $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
-                $result = mysqli_query($conn, $get_karta);
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-                        $id_ka=$row["id_k"];
-                    }
-                }
                 $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data', '$wynik', '$centyl')";
                 if (mysqli_query($conn, $sql)) {
                     echo "New record created successfully";
                 } else {
                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
+
+            }elseif($i>7 && $i<=14){
+                //klasa 1 - wiek:7
+                $data="2021-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=15 && $i<=21){
+                //klasa 2 - wiek: 8
+                $data="2020-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=22 && $i<=28){
+                //klasa 3 - wiek: 9
+                $data3="2022-01-10 20:17:01";
+                $data0="2019-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=29 && $i<=35){
+                //klasa 4 - wiek: 10
+                $data3="2021-01-10 20:17:01";
+                $data0="2018-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=36 && $i<=42){
+                //klasa 5 - wiek: 11
+                $data5="2022-01-10 20:17:01";
+                $data3="2020-01-10 20:17:01";
+                $data0="2017-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=43 && $i<=49){
+                //klasa 6 - wiek: 12
+                $data5="2021-01-10 20:17:01";
+                $data3="2019-01-10 20:17:01";
+                $data0="2016-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=50 && $i<=56){
+                //klasa 7 - wiek: 13
+                $data7="2022-01-10 20:17:01";
+                $data5="2020-01-10 20:17:01";
+                $data3="2018-01-10 20:17:01";
+                $data0="2015-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa7($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data7', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=57 && $i<=63){
+                //klasa 8 - wiek: 14
+
+                $data7="2021-01-10 20:17:01";
+                $data7="2021-01-10 20:17:01";
+                $data5="2019-01-10 20:17:01";
+                $data3="2017-01-10 20:17:01";
+                $data0="2014-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa7($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data7', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=64 && $i<=70){
+                //klasa 1 - wiek: 15
+                $data11="2022-01-10 20:17:01";
+                $data7="2020-01-10 20:17:01";
+                $data5="2018-01-10 20:17:01";
+                $data3="2016-01-10 20:17:01";
+                $data0="2013-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa11($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data11', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa7($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data7', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+
+            }elseif($i>=71 && $i<=77){
+                //klasa 2 - wiek: 16
+                $data11="2021-01-10 20:17:01";
+                $data7="2019-01-10 20:17:01";
+                $data5="2017-01-10 20:17:01";
+                $data3="2015-01-10 20:17:01";
+                $data0="2012-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa11($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data11', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa7($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data7', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=78 && $i<=84){
+                //klasa 3 - wiek: 17
+                $data11="2020-01-10 20:17:01";
+                $data7="2018-01-10 20:17:01";
+                $data5="2016-01-10 20:17:01";
+                $data3="2014-01-10 20:17:01";
+                $data0="2011-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa11($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data11', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa7($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data7', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
+            }elseif($i>=85 && $i<=91){
+                //klasa 4 - wiek: 18
+                $data14="2022-01-10 20:17:01";
+                $data11="2019-01-10 20:17:01";
+                $data7="2017-01-10 20:17:01";
+                $data5="2015-01-10 20:17:01";
+                $data3="2013-01-10 20:17:01";
+                $data0="2010-01-10 20:17:01";
+                $skurczowe=0;
+                $rozkurczowe=0;
+                $centyl=0;
+
+                klasa11($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data11', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa7($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data7', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa5($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data5', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa3($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data3', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+                klasa0($skurczowe, $rozkurczowe, $centyl);
+                $wynik=$skurczowe."/".$rozkurczowe;
+                $sql="INSERT INTO `kzu_cisnienie_tetnicze_krwi`(`Id_Karty`, `Data_Badania`, `Wynik`, `Centyl`) VALUES ('$id_ka', '$data0', '$wynik', '$centyl')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+
             }
         }
     }*/
 
-    //kzu_inne
-    //kzu_kwalifikacja_wf
-    //kzu_problemy
-    //kzu_skierowania
-    //kzu_sluch
-    //kzu_testy_do_wykrycia
-    //kzu_testy_przesiewowe
-    //kzu_wywiady_srodowiskowe
     //kzu_wzrok
+        // Tutaj badania dla jednego ucznia się będą powtarzać:
+        //Klasy: 0, 3, 5, 7, 1sr, ost sr
+        //zez tylko dla 0
+        //barwa tylko : 3, 5,
+        /*for($i=1;$i<=91;$i++){
+            if($i!=1 && $i!=17){
+                $Zez_Widoczny=0;
+                $Zez_Cover_Test="-";
+                $Zez_Odbicie_Swiatla_Na_Rogowkach='0';
+                $Oko_Prawe='5/5';
+                $Oko_Lewe='5/5';
+                $Widzenie_Barw='14/14';
+                //$Uwagi
+
+                //dane
+                if($i==23){
+                    $Oko_Prawe='5/10';
+                    $Oko_Lewe='5/10';
+                }
+
+                if($i>=1 && $i<=7){
+                    //klasa 0 - wiek:6
+                    $data="2022-01-10 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+
+                }elseif($i>7 && $i<=14){
+                    //klasa 1 - wiek:7
+                    $data="2021-01-10 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                }elseif($i>14 && $i<=21){
+                    //klasa 2 - wiek:8
+                    $data="2020-01-10 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                
+
+                }elseif($i>=22 && $i<=28){
+                    //klasa 3 - wiek: 9
+                    //dodanie 0,3x2
+                    //klasa 0 - wiek:6
+                    $data3="2022-01-10 10:30:18";
+                    $data0="2019-01-10 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    //klasa 0 ucznia
+                    //to do zapytanie sql
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 3
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+
+                }elseif($i>=29 && $i<=35){
+                    //klasa 4 - wiek: 10
+                    //dodanie 0,3x2
+                    //klasa 0 - wiek:6
+                    $data3="2021-01-10 10:30:18";
+                    $data0="2018-01-10 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    //klasa 0 ucznia
+                    //to do zapytanie sql
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 3
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+
+                }elseif($i>=36 && $i<=42){
+                    //klasa 5 - wiek: 11
+                    //klasa 3 - wiek: 9
+                    //klasa 0 - wiek: 6
+                    $data5="2022-01-10 10:30:18";
+                    $data3="2020-01-10 10:30:18";
+                    $data0="2017-01-10 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    //klasa 0 ucznia
+                    //to do zapytanie sql
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 3
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 5
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+
+                }elseif($i>=43 && $i<=49){
+                    //klasa 6
+                    $data5="2021-01-10 10:30:18";
+                    $data3="2019-01-10 10:30:18";
+                    $data0="2016-01-10 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    //klasa 0 ucznia
+                    //to do zapytanie sql
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 3
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 5
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                }elseif($i>=50 && $i<=56){
+                    //klasa 7 - wiek: 13
+                    //klasa 5 - wiek: 11
+                    //klasa 3 - wiek: 9
+                    //klasa 0 - wiek: 6
+                    $data7="2022-01-10 10:30:18";
+                    $data5="2020-01-10 10:30:18";
+                    $data3="2018-01-10 10:30:18";
+                    $data0="2015-01-09 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    //klasa 0 ucznia
+                    //to do zapytanie sql
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 3
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 5
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 7
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+
+				}elseif($i>=57 && $i<=63){
+					//klasa 8 - wiek: 14
+                    $data7="2021-01-10 10:30:18";
+                    $data5="2019-01-10 10:30:18";
+                    $data3="2017-01-10 10:30:18";
+                    $data0="2014-01-09 10:30:18";
+
+                    $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                    $result = mysqli_query($conn, $get_karta);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $id_ka=$row["id_k"];
+                        }
+                    }
+
+                    //klasa 0 ucznia
+                    //to do zapytanie sql
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 3
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 5
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+                    //klasa 7
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+					
+					
+					
+                }elseif($i>=64 && $i<=70){
+                    //klasa 1 - wiek: 15
+                   //klasa 7 - wiek: 13
+                   //klasa 5 - wiek: 11
+                   //klasa 3 - wiek: 9
+                   //klasa 0 - wiek: 6
+                   $data11="2022-01-10 10:30:18";
+                   $data7="2020-01-10 10:30:18";
+                   $data5="2018-01-10 10:30:18";
+                   $data3="2016-01-08 10:30:18";
+                   $data0="2013-01-10 10:30:18";
+
+                   $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                   $result = mysqli_query($conn, $get_karta);
+                   if (mysqli_num_rows($result) > 0) {
+                       // output data of each row
+                       while($row = mysqli_fetch_assoc($result)) {
+                           $id_ka=$row["id_k"];
+                       }
+                   }
+
+                   //klasa 0 ucznia
+                   //to do zapytanie sql
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 3
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 5
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 7
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 1
+                  $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data11', '$Oko_Prawe', '$Oko_Lewe')";
+                  if (mysqli_query($conn, $sql)) {
+                      echo "New record created successfully";
+                  } else {
+                      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                  }
+
+                }elseif($i>=71 && $i<=77){
+                   //klasa 2
+                   $data11="2021-01-10 10:30:18";
+                   $data7="2019-01-10 10:30:18";
+                   $data5="2017-01-10 10:30:18";
+                   $data3="2015-01-08 10:30:18";
+                   $data0="2012-01-10 10:30:18";
+
+                   $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                   $result = mysqli_query($conn, $get_karta);
+                   if (mysqli_num_rows($result) > 0) {
+                       // output data of each row
+                       while($row = mysqli_fetch_assoc($result)) {
+                           $id_ka=$row["id_k"];
+                       }
+                   }
+
+                   //klasa 0 ucznia
+                   //to do zapytanie sql
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 3
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 5
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 7
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 1
+                  $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data11', '$Oko_Prawe', '$Oko_Lewe')";
+                  if (mysqli_query($conn, $sql)) {
+                      echo "New record created successfully";
+                  } else {
+                      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                  }
+
+                }elseif($i>=78 && $i<=84){
+                    //klasa 3
+                   $data11="2020-01-10 10:30:18";
+                   $data7="2018-01-10 10:30:18";
+                   $data5="2016-01-10 10:30:18";
+                   $data3="2014-01-08 10:30:18";
+                   $data0="2011-01-10 10:30:18";
+
+                   $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                   $result = mysqli_query($conn, $get_karta);
+                   if (mysqli_num_rows($result) > 0) {
+                       // output data of each row
+                       while($row = mysqli_fetch_assoc($result)) {
+                           $id_ka=$row["id_k"];
+                       }
+                   }
+
+                   //klasa 0 ucznia
+                   //to do zapytanie sql
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 3
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 5
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 7
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 1
+                  $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data11', '$Oko_Prawe', '$Oko_Lewe')";
+                  if (mysqli_query($conn, $sql)) {
+                      echo "New record created successfully";
+                  } else {
+                      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                  }
+
+                }elseif($i>=85 && $i<=91){
+                   //klasa 4 - wiek: 18
+                   //klasa 1 - wiek: 15
+                   //klasa 7 - wiek: 13
+                   //klasa 5 - wiek: 11
+                   //klasa 3 - wiek: 9
+                   //klasa 0 - wiek: 6
+                   $data14="2022-01-10 10:30:18";
+                   $data11="2019-01-10 10:30:18";
+                   $data7="2017-01-10 10:30:18";
+                   $data5="2015-01-09 10:30:18";
+                   $data3="2013-01-10 10:30:18";
+                   $data0="2010-01-08 10:30:18";
+
+                   $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+                   $result = mysqli_query($conn, $get_karta);
+                   if (mysqli_num_rows($result) > 0) {
+                       // output data of each row
+                       while($row = mysqli_fetch_assoc($result)) {
+                           $id_ka=$row["id_k"];
+                       }
+                   }
+
+                   //klasa 0 ucznia
+                   //to do zapytanie sql
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Zez_Widoczny`, `Zez_Cover_Test`, `Zez_Odbicie_Swiatla_Na_Rogowkach`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data0', '$Zez_Widoczny', '$Zez_Cover_Test', '$Zez_Odbicie_Swiatla_Na_Rogowkach', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 3
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data3', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 5
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`, `Widzenie_Barw`, `Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Widzenie_Barw', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 7
+                   $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data5', '$Oko_Prawe', '$Oko_Lewe')";
+                   if (mysqli_query($conn, $sql)) {
+                       echo "New record created successfully";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   }
+                   //klasa 1
+                  $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data11', '$Oko_Prawe', '$Oko_Lewe')";
+                  if (mysqli_query($conn, $sql)) {
+                      echo "New record created successfully";
+                  } else {
+                      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                  }
+                  //klasa 4
+                    $sql="INSERT INTO `kzu_wzrok` (`Id_Karty`, `Data`,`Oko_Prawe`, `Oko_Lewe`) VALUES ('$id_ka', '$data14', '$Oko_Prawe', '$Oko_Lewe')";
+                    if (mysqli_query($conn, $sql)) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+            }
+        }}*/
+
+
+    //kzu_kwalifikacja_wf
+        //jak się zmieni + przy pierwszym badaniu, czyli klasa 0
+    /*for($i=1;$i<=91;$i++){
+            if($i!=1 && $i!=17){
+
+               if($i>=1 && $i<=7){
+                    //klasa 0 - wiek: 6
+                    $data="2022-01-10 13:48:11";
+               }elseif($i>7 && $i<=14){
+                    //klasa 1 - wiek: 7
+                    $data="2021-01-10 13:48:11";
+               }elseif($i>14 && $i<=21){
+                    //klasa 2 - wiek: 8
+                    $data="2020-01-10 13:48:11";
+               }elseif($i>=22 && $i<=28){
+                    //klasa 3 - wiek: 9
+                    $data="2019-01-10 13:48:11";
+               }elseif($i>=29 && $i<=35){
+                    //klasa 4 - wiek: 10
+                    $data="2018-01-10 13:48:11";
+               }elseif($i>=36 && $i<=42){
+                   //klasa 5 - wiek: 11
+                   $data="2017-01-10 13:48:11";
+               }elseif($i>=43 && $i<=49){
+                    //klasa 6 - wiek: 12
+                    $data="2016-01-10 13:48:11";
+               }elseif($i>=50 && $i<=56){
+                    //klasa 7 - wiek: 13
+                    $data="2015-01-10 13:48:11";
+               }elseif($i>=57 && $i<=63){
+                    //klasa 8 - wiek: 14
+                    $data="2014-01-10 13:48:11";
+               }elseif($i>=64 && $i<=70){
+                    //klasa 1 - wiek: 15
+                    $data="2013-01-10 13:48:11";
+               }elseif($i>=71 && $i<=77){
+                    //klasa 2 - wiek: 16
+                    $data="2012-01-10 13:48:11";
+               }elseif($i>=78 && $i<=84){
+                    //klasa 3 - wiek: 17
+                    $data="2011-01-10 13:48:11";
+               }elseif($i>=85 && $i<=91){
+                    //klasa 4 - wiek: 18
+                    $data="2010-01-10 13:48:11";
+               }
+
+
+               $get_karta = "SELECT `Id_Karty` AS 'id_k' FROM `kzu` WHERE `Id_Ucznia`=$i";
+
+               $result = mysqli_query($conn, $get_karta);
+               if (mysqli_num_rows($result) > 0) {
+                   // output data of each row
+                   while($row = mysqli_fetch_assoc($result)) {
+                       $karta=$row["id_k"];
+                   }
+               }
+
+                if($karta==61 || $karta==64 || $karta==7 || $karta==9 || $karta==14 || $karta==15){
+                    $kw="B";
+                }else{
+                    $kw="A";
+                }
+                $sql="INSERT INTO `kzu_kwalifikacja_wf`(`Id_Karty`,`Data`, `Grupa`) VALUES ('$karta','$data','$kw')";
+                if (mysqli_query($conn, $sql)) {
+                    echo "Success";
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+          }
+    }*/
+
+    //kzu_sluch
+        // Klasy: 0, 7
+
+    //kzu_testy_do_wykrycia
+        // Tutaj badania dla jednego ucznia się będą powtarzać:
+        // Skolioza: 0, 3, 5, 7, 1sr
+        // Klifoza_Piersiowa: 7, 1sr
+        // Koslawosc_Kolan: 0
+        // Stopy_Plaskokoslawe: 0
+
+        // Klasa 0: Skolioza, Koslawosc_Kolan, Stopy_Plaskokoslawe
+        // Klasa 3: Skolioza
+        // Klasa 5: Skolioza
+        // Klasa 7: Skolioza, Klifoza_Piersiowa
+        // Klasa 1sr: Skolioza, Klifoza_Piersiowa
+
+
+    //kzu_testy_przesiewowe
+        // Tutaj badania dla jednego ucznia się będą powtarzać:
+        // Data: zawsze
+        // Wiek: zawsze
+        // Wysokosc_Ciala_Cm, Wysokosc_Ciala_Centyl: zawsze
+        // Masa_Ciala_Kg, Masa_Ciala_Centyl: zawsze
+        // Masa_Ciala_Bmi: zawsze
+
 
 mysqli_close($conn);
 ?>

@@ -56,4 +56,7 @@ public class Student extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     private AppUser appUser;
+
+    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.PERSIST)// TODO: sql insert data
+    private Parent parent;
 }
