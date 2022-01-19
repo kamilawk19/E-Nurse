@@ -1,4 +1,84 @@
 body
 {
-	/*background-color: lightblue;*/
+	background-color: lightblue;
 }
+
+
+/*<div id="container">
+		<div id="header">
+		
+		
+		</div>	
+		
+		<div id="nav">
+		
+		
+		</div>	
+		<div id="left">
+		
+		
+		</div>	
+		<div id="content">
+		
+		
+		</div>	
+		<div id="footer">
+		
+		
+		</div>		
+	</div>*/
+	
+#container
+{
+	margin-left: auto;
+	margin-right: auto;	
+	border: 1px solid black;
+	width: 1200px;
+	height: 900px;	
+	/*box-sizing: border-box;*/
+}
+
+#header
+{
+	border-bottom: 1px solid black;
+	box-sizing: border-box;
+	/*box-sizing: border-box;*/
+	/*border-collapse: collapse;*/
+	height: 99px;	
+	padding: 15px;
+}
+
+#nav
+{
+	border-right: 1px solid black;
+	box-sizing: border-box;
+	width: 200px;
+	height: 700px;
+	float: left;
+	padding: 15px;
+}
+
+#content
+{
+	width: 970px;	
+	height: 670px;
+	/*background-color: yellow;*/
+	float: left;
+	padding: 15px;
+}
+
+#footer
+{
+	padding: 15px;
+	clear: both;
+	/*background: lightgreen;*/
+	height:99px;
+	width: 1170px;
+	border-top: 1px solid black;
+}
+
+
+	
+	
+	
+	

@@ -25,7 +25,7 @@ else
 	
 	$haslo_hash = password_hash($haslo, PASSWORD_BCRYPT);
 
-    $sql = "SELECT * FROM user WHERE username='$login' AND password='$haslo'";
+    //$sql = "SELECT * FROM user WHERE username='$login' AND password='$haslo'";
    
     if($result = @$conn->query(sprintf("SELECT * FROM nurse WHERE Login='%s'", mysqli_real_escape_string($conn, $login)))) 
     {
@@ -37,9 +37,12 @@ else
 			
 			if(password_verify($haslo, $row['Haslo']))
 			{									
-				$_SESSION['zalogowany'] = true;						
+				$_SESSION['zalogowany'] = true;	
+				
+				$_SESSION['nurseid'] = $row['Id'];
 				$_SESSION['imie'] = $row['Imie'];
 				$_SESSION['nazwisko'] = $row['Nazwisko'];			
+						
 				
 				unset($_SESSION['blad']);		
 
