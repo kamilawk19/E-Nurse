@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Overpass:wght@700&display=swap');
+/* Variables */
+
+
+
+/* Global styles */
+html {
+    font-size: 100%;   /* 16px */
+    box-sizing: border-box;
+  }
+h1{
+    font-family: Barlow Semi Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.5rem;
+}
+h2{
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+    letter-spacing: -0.02em;
+}
+h3{
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.375rem;
+    line-height:  1.7rem;;
+    letter-spacing: -0.02em;
+}
+h4{
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.02rem;
+    }
+p{
+    font-family: Open Sans;
+    font-size: 1.125rem;
+}
+ul {
+    list-style-type: none;
+}
+
+/* Container styles */
+.container{
+    max-width: 130rem;    
+    padding: 1rem;
+}
+
+/* Button styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    color:#646464
+}
+
+.btn-peach--filled{
+    width: 14.625rem;
+    height: 3.75rem;
+    padding-top: 0.2rem;
+    border: 0;
+    border-radius: 50px;
+    background: #FBC7A8;
+    font-family: Overpass;
+    font-weight: bold;
+    font-size: 1.375rem;
+    color: white;
+}
+.btn-peach--filled:hover{
+    background:#FCD9C5
+}
+
+.btn-blue{
+    padding: 0.5rem 1.25rem 0.4rem 1.25rem;
+    border: 2px solid #7CA6CB;
+    border-radius: 50px;
+    font-family: Overpass;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #7CA6CB;
+}
+.btn-blue:hover{
+    border: 2px solid #99BAD6;
+    color: #99BAD6;
+}
+
+/* Navbar */
+.navbar__heading{
+    display: flex;
+    padding: 0.7rem 0.3rem 1rem 0;
+}
+.navbar__heading img{
+    height: 7rem;
+    padding: 0 0.5rem;
+}
+.navbar__heading h3{
+    color: #646464;
+}
+.navbar__heading .subtitle{    
+    padding: 1.25rem 1rem;
+}
+
+/* Login container */
+.background__container{
+    display: flex;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    background-color: white;
+}
+.form{
+    padding: 10vh 0;
+    text-align: center;
+}
+.form h1{
+    padding-bottom: 3.25rem;
+}
+.form h3{
+    padding-bottom: 3.625rem;
+}
+.form a{
+    padding-bottom: 2.625rem;
+    text-align: right;    
+    display: inherit;
+}
+.form input[type=text] {
+    width: 100%;
+    padding-bottom: 4rem;
+    border: 0;
+    border-bottom: 1px solid #646464;
+    font-size: 1.125rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+}
+.form input[type=text]:focus{
+    outline: none;
+    border-bottom: 2px solid #FBC7A8;
+}
+
+.form input[type=password]{
+    width: 100%;
+    padding-bottom: 1rem;
+    border: 0;
+    border-bottom: 1px solid #646464;
+    font-size: 1.125rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+}
+.form input[type=password]:focus{
+    outline: none;
+    border-bottom: 2px solid #FBC7A8;
+}
+.form input[type=email] {
+    width: 100%;
+    margin-bottom: 3.75rem;
+    padding-bottom: 4rem;
+    border: 0;
+    border-bottom: 1px solid #646464;
+    font-size: 1.125rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+}
+.form input[type=email]:focus{
+    outline: none;
+    border-bottom: 2px solid #FBC7A8;
+}
+.update{
+    padding-top: 2.625rem;
+    padding-left: 2.75rem;
+    border-left: 1px solid #E5E5E5;
+    color: #646464;
+}
+.update h4{
+    padding-bottom: 0.5rem;
+}
+.update img{
+    padding-left: 3vw;
+    padding-bottom: 0.5rem;
+    max-height: 35rem;
+}
+
+/* Reset password */
+.reset__pass{
+    padding: 22vh 0;
+}
+
+/*Choos school*/
+.choose_school_container{
+    text-align: center;
+    padding: 8vh 0;
+}
+.schools__list{
+    padding: 1rem 0;
+}
+.schools__list li{
+    padding: 1rem 0;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.schools__list li:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Backgroung vectors */
+.peach_vector{
+    position: absolute;
+    top: 35%;
+    left: 21%;
+    z-index: -1;
+}
+
+.blue_vector{
+    position: absolute;
+    top: 12%;
+    left: 53%;
+    z-index: -1;
+}
