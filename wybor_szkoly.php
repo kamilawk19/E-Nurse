@@ -26,8 +26,63 @@
 	
 	<p> Wybierz placówkę szkolną :</p>		
 	
-	<?php	
+	<?php			
 		
+		// pobierz ID pielęgniarki która się zalogowała ✓
+		
+		//wybierz tylko tę szkołę, do której należy pielęgniarka : 
+		
+		$nurse_id = $_SESSION['nurseid'];
+		
+		//echo "<br> nurse_id = $nurse_id <br>";		
+		
+		require_once "connect.php";				
+		
+		$conn = @new mysqli($servername, $username, $password, $dbname);
+
+		if($conn->connect_errno!=0)
+		{			
+			echo "Błąd połączenia".$conn->connect_errno()."\n";
+		}		
+		else
+		{		
+			$sql = "SELECT School_Id FROM nurse_school WHERE Nurse_Id=$nurse_id";	// 4 		
+			//$sql = "SELECT School_Id FROM nurse_school";	// 4 		
+
+			$result = $conn->query($sql);
+			
+			if($result) 
+			{
+				$number_of_rows = $result->num_rows;
+				
+				if($number_of_rows>0)
+				{
+					//$row = $result->fetch_assoc();
+					
+					while($row = $result->fetch_assoc())
+					{										
+						//echo '<a href="main.php?school_id='.$row['Id'].' ">';				
+						//echo $row["Name"];
+						//echo '</a><br><br>';									
+						//$id = $row['Id'];
+						
+						//echo $row["School_Id"];
+						$school_id = $row['School_Id'];					
+					}					
+				}				
+				else 
+				{ 					
+					echo "<br>brak danych do wyświetlenia<br>";						
+				}       
+			}			
+			$conn->close();
+		}
+	
+	
+		//echo "<br> school_id = $school_id <br>";
+	
+		//$_SESSION['nurseid'];
+				
 		require_once "connect_edziennik.php";				
 		
 		$conn = @new mysqli($servername, $username, $password, $dbname);
@@ -38,7 +93,7 @@
 		}		
 		else
 		{		
-			$sql = "SELECT Id, Name FROM school";			
+			$sql = "SELECT Id, Name FROM school WHERE Id=$school_id";			
 
 			$result = $conn->query($sql);
 			

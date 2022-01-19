@@ -22,11 +22,11 @@
     <?php	
 		echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 		
-		$x = $_GET['school_id'];
+		$school_id = $_GET['school_id'];
 		
 		//echo $x;
 		
-		echo "Wybrałeś szkołę o id =" . $x . " ";
+		echo "Wybrałeś szkołę o id =" . $school_id . " ";
 		
 			// dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
 			
@@ -47,9 +47,9 @@
 		<div id="nav">			
 			
 			<?php
-				echo '<a href="main.php?school_id='.$x.' ">Strona główna</a><br>';
-				echo '<a href="klasy.php?school_id='.$x.' ">Klasy</a><br>';
-				echo '<a href="dziennik.php?school_id='.$x.' ">Dziennik codzienny</a><br>';
+				echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
+				echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';
+				echo '<a href="dziennik.php?school_id='.$school_id.' ">Dziennik codzienny</a><br>';
 			?>
 			
 			
