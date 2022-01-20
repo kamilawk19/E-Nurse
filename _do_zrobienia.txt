@@ -20,7 +20,7 @@ DO ZROBIENIA :
 	• Podstrona z wysłaniem masowych powiadomień na email
 	• Podstrona z wysłaniem masowych powiadomień na edziennik
 
-	• Podstrona z widokiem wpisów dziennika codziennego
+	• Podstrona z widokiem wpisów dziennika codziennego			(Kamila)
 	• Podstrona z widokiem dodania wpisu dziennika codziennego
 	• Podstrona z widokiem usunięcia wpisu dziennika codziennego
 	• Podstrona z widokiem edycji wpisu dziennika codziennego
@@ -33,10 +33,6 @@ DO ZROBIENIA :
 	• Możliwość edytowania danych uczniów
 	
 	• Podstrona z generowaniem pliku z kzu i dziennika codzinnego
-	
-	• Uzupełnienie danymi bazy e-nurse (Kamila)
-	• Zrobienie widoków w bazie e-dziennik (Kamila)
-	• Zrobienie widoków w bazie e-nurse (Kamila)
 	
 	Side note
 	• ! Możliwość wysłania powiadomienia do ucznia (Przychowywanie powiadomień w BD dla danych uczniów - pobieranie ich z BD i wyświetlanie po stronie e-dziennika)
@@ -58,5 +54,5 @@ ZROBIONO:
 	✓ System Logowania			15.12.2021	Jakub Wojciechowski
 	✓ Uzupełnienie danymi bazy e-dziennik	07.01.2022	Kamila Krzyżaniak
 	✓ Dodanie baz danych do 000webhost	13.01.2022	Kamila Krzyżaniak 	Uwaga: Ograniczenie w 000webhost. Nie mogę stworzyć kluczy obcych do tabeli z innej bazy danych.
-	
+	• Uzupełnienie danymi bazy e-nurse	20.01.2022	Kamila Krzyżaniak
 	
