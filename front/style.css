@@ -37,13 +37,27 @@ h4{
     font-size: 1rem;
     line-height: 1.25rem;
     letter-spacing: -0.02rem;
-    }
+}
+h5{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 95px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
 p{
     font-family: Open Sans;
     font-size: 1.125rem;
 }
 ul {
     list-style-type: none;
+}
+header{
+    display: flex;
 }
 
 /* Container styles */
@@ -77,6 +91,7 @@ a:hover{
     background:#FCD9C5
 }
 
+
 .btn-blue{
     padding: 0.5rem 1.25rem 0.4rem 1.25rem;
     border: 2px solid #7CA6CB;
@@ -91,7 +106,35 @@ a:hover{
     color: #99BAD6;
 }
 
+.btn-blue--filled{
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: 50px;
+    background: #CAE3F7;
+    font-family: Overpass;
+    font-weight: bold;
+    font-size: 1.375rem;
+    color: white;
+}
+.btn-blue--filled:hover{
+    background: #B8D9F4;
+}
+
+.btn-back{
+    display: flex;
+    color: #646464;
+    gap: 1.25rem;
+    padding: 2rem 0 1.8rem 0;
+}
+.btn-back img{
+    width: 3.875rem;
+    height: 1.5rem;
+}
+
 /* Navbar */
+.navbar{
+    padding: 0 1rem;
+}
 .navbar__heading{
     display: flex;
     padding: 0.7rem 0.3rem 1rem 0;
@@ -107,6 +150,30 @@ a:hover{
     padding: 1.25rem 1rem;
 }
 
+.navbar__list {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+.navbar__list-item {
+    color: #646464
+}
+.navbar__list-item h3:hover {
+    color: black
+}
+.navbar__list-item-current {
+    color: black
+}
+.navbar__buttons-container{
+    display: flex;
+    gap: 3.125rem
+}
+.setting_img{
+    padding: 0.84rem 0;
+}
+.notiffication_img{
+    padding: 0.6rem 0;
+}
 /* Login container */
 .background__container{
     display: flex;
@@ -217,10 +284,95 @@ a:hover{
     left: 21%;
     z-index: -1;
 }
-
+.peach_vector-main{
+    position: absolute;
+    top: 1rem;
+    left: 70%;
+    z-index: -1;
+}
 .blue_vector{
     position: absolute;
     top: 12%;
     left: 53%;
     z-index: -1;
 }
+.blue_vector-main{
+    position: absolute;
+    top: 13.125rem;
+    left: 0.75rem;
+    z-index: -1;
+}
+
+/* Header */
+header h1{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/* Main Page */
+
+.upcoming_events{
+    text-align: center;
+    display:block;
+    padding: 2rem;
+}
+.upcoming_event{
+    display: flex;
+    padding-top: 2rem;
+}
+.date{
+    display: block;    
+}
+.evet_title{
+    text-align: left;
+    padding: 2.18rem 0;
+}
+
+.colum_journal_class{
+    padding-left: 3rem;
+}
+.journal_main{
+    padding: 2rem;
+    gap: 2vw;
+}
+.journal_main h2{
+    padding-top: 0.2rem;
+}
+.journal_main a{
+    background-color: #FBC7A8;
+}
+.journal_main a:hover{
+    background-color: #FCD9C5;
+    color: white;
+}
+.recent_classes{
+    display: block;
+    padding: 2.5rem;
+    margin-top: 2rem;;
+}
+.recent__classes{
+    display: flex;
+    margin-top: 2rem;
+    gap: 1vw;
+}
+.recent_class{
+    width: 11vw;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+}
+#recent_class1{
+    background-color: #6D9AC5;
+}
+#recent_class2{
+    background-color: #A7D0F1;
+}
+#recent_class3{
+    background-color: #FBC7A8;
+}
+.teacher{
+    font-weight: bold;
+}
+
+
