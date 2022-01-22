@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>E-nurse - wybor szkoly</title>
     <link rel="stylesheet" href="style.css">	
-	<style></style>	
+	<style></style>
 </head>
 
 <body>	
@@ -26,28 +26,26 @@
 	
 	<p> Wybierz placówkę szkolną :</p>		
 	
-	<?php			
+	<?php	
+	
+		$nurse_id = $_SESSION['nurseid']; // pobierz ID pielęgniarki która się zalogowała ✓
 		
-		// pobierz ID pielęgniarki która się zalogowała ✓
+		// wybierz tylko tę szkoły, do których należy pielęgniarka		
 		
-		//wybierz tylko tę szkołę, do której należy pielęgniarka : 
-		
-		$nurse_id = $_SESSION['nurseid'];
-		
-		//echo "<br> nurse_id = $nurse_id <br>";		
+			//echo "<br> nurse_id = $nurse_id <br>";		
 		
 		require_once "connect.php";				
 		
 		$conn = @new mysqli($servername, $username, $password, $dbname);
 
 		if($conn->connect_errno!=0)
-		{			
-			echo "Błąd połączenia".$conn->connect_errno()."\n";
+		{				
+			echo "[ Błąd połączenia ] (".$conn->connect_errno."), Opis: ".$conn->connect_error;
 		}		
 		else
 		{		
-			$sql = "SELECT School_Id FROM nurse_school WHERE Nurse_Id=$nurse_id";	// 4 		
-			//$sql = "SELECT School_Id FROM nurse_school";	// 4 		
+			$sql = "SELECT School_Id FROM nurse_school WHERE Nurse_Id=$nurse_id";	 		
+			//$sql = "SELECT School_Id FROM nurse_school";		
 
 			$result = $conn->query($sql);
 			
@@ -63,11 +61,9 @@
 					{										
 						//echo '<a href="main.php?school_id='.$row['Id'].' ">';				
 						//echo $row["Name"];
-						//echo '</a><br><br>';									
-						//$id = $row['Id'];
-						
+						//echo '</a><br><br>';											
 						//echo $row["School_Id"];
-						$school_id = $row['School_Id'];					
+						$school_id = $row['School_Id'];									
 					}					
 				}				
 				else 
@@ -79,7 +75,7 @@
 		}
 	
 	
-		//echo "<br> school_id = $school_id <br>";
+		//echo "school_id = $school_id<br>";
 	
 		//$_SESSION['nurseid'];
 				
@@ -110,7 +106,8 @@
 						echo '<a href="main.php?school_id='.$row['Id'].' ">';				
 						echo $row["Name"];
 						echo '</a><br><br>';									
-						$id = $row['Id'];
+						//$id = $row['Id'];
+						$_SESSION['school_id'] = $row['Id']; 
 					}					
 				}				
 				else 

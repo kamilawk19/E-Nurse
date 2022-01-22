@@ -15,9 +15,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>E-nurse - strona główna</title>
-    <link rel="stylesheet" href="style.css">
-
-		
+    <link rel="stylesheet" href="style.css">		
 </head>
 
 
@@ -26,7 +24,7 @@
     <?php	
 		echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 		
-		$school_id = $_GET['school_id'];		
+		$school_id = $_SESSION['school_id'];		
 		
 		echo "Wybrałeś szkołę o id =" . $school_id . " ";
 		
@@ -34,15 +32,9 @@
 		
 		/*echo '<br><a href="main.php?school_id='.$school_id.' ">Strona główna</a> ';
 		
-		echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';*/
-		
+		echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';*/	
 		
 	?>	
-	
-	
-	
-	
-	
 	
 	<div id="container">
 	
@@ -71,7 +63,7 @@
 				//echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 				
 				$class_id = $_GET['class_id'];
-				$school_id = $_GET['school_id'];
+				//$school_id = $_GET['school_id'];
 				
 				//echo $x;
 				
@@ -157,8 +149,11 @@
 											//echo '<span name="school_id" >';
 												//echo $row["Id"] . ", ". $row["Name"]. "<br>"; 
 												//echo $row["Id"] . ", ". $row["Name"]; '<a href="main.php?school_id='.$row['Id'].' ">';	
-										echo $row["First_Name"] . " " . $row["Last_Name"] . ' <a href="uczen.php?school_id='.$school_id.'&class_id='.$class_id.'&student_id='.$row['Id_User'].'">Informacje o uczniu </a><br>';
-									echo '<br>';
+										echo $row["First_Name"] . " " . $row["Last_Name"] . ' <a href="uczen.php?school_id='.$school_id.'&class_id='.$class_id.'&student_id='.$row['Id_User'].'">Informacje o uczniu </a>';
+										//echo '<a href="dodaj_badanie.php?school_id="'.$school_id.'">+ Dodaj badanie</a>';
+										
+										echo ' <a href="wybierz_badanie.php?student_id='.$row['Id_User'].'&class_id='.$class_id.'">+ Dodaj badanie</a><br>';
+									echo '<br>';	
 									
 									// ! SELECT * FROM `class` GROUP BY Class
 									

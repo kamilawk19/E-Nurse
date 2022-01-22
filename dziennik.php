@@ -29,7 +29,16 @@
 		</div>	
 		
 		<div id="nav">			
-		
+	
+			<?php
+				//echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
+				echo '<a href="main.php">Strona główna</a><br>';
+				echo '<a href="klasy.php">Klasy</a><br>';
+				echo '<a href="dziennik.php">Dziennik codzienny</a><br>';
+			?>
+			
+			
+			
 		</div>	
 		
 		<!--<div id="left">
@@ -41,7 +50,7 @@
 			<?php	
 				echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 				
-				$school_id = $_GET['school_id'];
+				$school_id = $_SESSION['school_id'];
 				
 				//echo $x;
 				

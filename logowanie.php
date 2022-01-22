@@ -13,8 +13,8 @@ require_once "connect.php";
 $conn = @new mysqli($servername, $username, $password, $dbname);
 
 if($conn->connect_errno!=0)
-{    
-    echo "Błąd połączenia".$conn->connect_errno()."\n";
+{    	
+	echo "[ Błąd połączenia ] (".$conn->connect_errno."), Opis: ".$conn->connect_error;	
 }
 else
 {
@@ -37,17 +37,12 @@ else
 			
 			if(password_verify($haslo, $row['Haslo']))
 			{									
-				$_SESSION['zalogowany'] = true;	
-				
+				$_SESSION['zalogowany'] = true;					
 				$_SESSION['nurseid'] = $row['Id'];
 				$_SESSION['imie'] = $row['Imie'];
-				$_SESSION['nazwisko'] = $row['Nazwisko'];			
-						
-				
-				unset($_SESSION['blad']);		
-
-				$result->free_result(); // close(); free(); ... free_result();*/			
-			
+				$_SESSION['nazwisko'] = $row['Nazwisko'];					
+				unset($_SESSION['blad']);
+				$result->free_result(); // close(); free(); ... free_result();			
 				header('Location: wybor_szkoly.php');  
 			}			
 			else 

@@ -23,17 +23,16 @@
     <?php	
 		echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 		
-		$school_id = $_GET['school_id'];		
+		//$school_id = $_GET['school_id'];		
 		
-		echo "Wybrałeś szkołę o id =" . $school_id . " ";
+		//echo "Wybrałeś szkołę o id =" . $school_id . " ";
 		
 		// dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
 		
-		echo '<br><a href="main.php?school_id='.$school_id.' ">Strona główna</a> ';
+		//echo '<br><a href="main.php?school_id='.$school_id.' ">Strona główna</a> ';
 		
-		echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';
-		
-		
+		//echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';		
+				
 	?>	
 	
 	<div id="container">
@@ -45,9 +44,9 @@
 		
 		<div id="nav">
 			<?php
-				echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
-				echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';
-				echo '<a href="dziennik.php?school_id='.$school_id.' ">Dziennik codzienny</a><br>';
+				echo '<a href="main.php">Strona główna</a><br>';
+				echo '<a href="klasy.php">Klasy</a><br>';
+				echo '<a href="dziennik.php">Dziennik codzienny</a><br>';
 			?>
 		
 		</div>	
@@ -66,6 +65,9 @@
 				
 				$conn = @new mysqli($servername, $username, $password, $dbname);
 
+				$school_id = $_SESSION['school_id'];
+
+
 				if($conn->connect_errno!=0)
 				{
 					/*echo "Błąd połączenia".@conn->connect_errno." = ".conn->connect_error;*/
@@ -73,7 +75,7 @@
 				}
 				else
 				{					
-					$sql = "SELECT * FROM class WHERE Id_School = $school_id";				
+					$sql = "SELECT * FROM class WHERE Id_School = $school_id";					
 
 					$result = $conn->query($sql);
 				
@@ -86,9 +88,13 @@
 							while($row = $result->fetch_assoc())
 							{						
 								//echo '<br><a href="klasa.php?class_id='.$row['Id'].'&school_id='.$school_id.'">';										
-								echo '<br><a href="klasa.php?school_id='.$school_id.'&class_id='.$row['Id'].'">';										
-									echo $row["Class"];
-								echo '</a><br>';												
+								
+								echo '<div id=class_div>';
+									echo '<a href="klasa.php?class_id='.$row['Id'].'">';								
+										echo $row["Class"];
+									echo '</a><br>';	
+								echo '</div>';
+								//echo "<br>";
 							}				
 						}
 						

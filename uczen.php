@@ -71,10 +71,10 @@
 		
 		// dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
 		
-		echo '<br><a href="main.php?school_id='.$school_id.' ">Strona główna</a>';
+		/*echo '<br><a href="main.php?school_id='.$school_id.' ">Strona główna</a>';
 		
-		echo ' <a href="klasy.php?school_id='.$school_id.' ">Klasy</a>';
-		
+		echo ' <a href="klasy.php?school_id='.$school_id.' ">Klasy</a>';*/	
+	
 		require_once "connect_edziennik.php";			
 		
 		$conn = @new mysqli($servername, $username, $password, $dbname);	
@@ -85,7 +85,17 @@
 		}
 		else
 		{	
-			$sql = "SELECT * FROM student WHERE Id_User = $student_id";		
+			//$sql = "SELECT * FROM student WHERE Id_User = $student_id";	
+			/*$sql = "SELECT * FROM student 
+					JOIN adress
+					ON adress.Id = student.Adress_Id
+					WHERE Id_User = $student_id";*/
+					
+			$sql = "SELECT First_Name, Second_Name, Last_Name, SUBSTR(Birth_Date, 1, 10) AS Birth_Date, Pesel, 
+					Sex, Phone_Number, Email, Street, Bulding_Number, Flat_Number, City, Zip FROM student 
+					JOIN adress
+					ON adress.Id = student.Adress_Id
+					WHERE Id_User = $student_id";							
 
 			$result = $conn->query($sql);
 			
@@ -104,10 +114,16 @@
 						echo '<a href="klasa.php?school_id='.$school_id.'&class_id='.$class_id.'"> <- Powrót do listy klas </a><br><br>';
 						echo "Informacje o uczniu <br><br>";
 						echo "<b>dane osobowe : </b><br>";
-
-						echo $row["First_Name"] . " " . $row["Second_Name"] . " " . $row["Last_Name"] . "<br>";
-						echo $row["Nationality"] . " " . $row["Birth_Date"] . " " . $row["Sex"] . "<br>" ;
-						echo $row["Phone_Number"] . " " . $row["Email"]."";
+					// ! UWZGLĘDNIAĆ ZGODE UCZNIA NA ŚWIADZCENIE USŁUG - wyświetlać tylko tych uczniów którzy sie zgodzili
+						echo "Imię: ". $row["First_Name"] . " " . $row["Second_Name"] ."<br>";
+						echo " Nazwisko: " . $row["Last_Name"] . "<br>";
+						/*echo "Narodowość: " . $row["Nationality"] . " " .*/
+						echo "Data urodzenia: " .$row["Birth_Date"] . "<br>" ;
+						echo "Pesel: " . $row["Pesel"] . "<br>" ;
+						echo "Płeć: " . $row["Sex"] . "<br>" ;
+						echo "Adres: ul. " . $row["Street"] . " " . $row["Bulding_Number"] . "/" . $row["Flat_Number"] . " " . $row["City"] . " " . $row["Zip"] . "<br>";						
+						echo "Telefon: " . $row["Phone_Number"] . "<br>";
+						echo "e-mail: " .$row["Email"]. "<br>";
 						echo '<br>';							
 					}						
 				}
@@ -119,7 +135,7 @@
 			}
 			
 			$conn->close();
-		}
+		}		
 		
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 		
@@ -147,7 +163,8 @@
 				{										
 					$row = $kzu_result->fetch_assoc();										
 					
-					$id_karty = $row['Id_Karty'];							
+					$id_karty = $row['Id_Karty'];		
+					echo "id_karty = $id_karty <br>";
 				}
 				
 				else 
@@ -179,7 +196,7 @@
 					{
 						while($row = $kzu_choroby_result->fetch_assoc())
 						{										
-							echo "Rok życia : ".$row['Rok_Zycia'].", Choroba : ".$row['choroba'].", " . $row["Rodzaj_Choroby"] . "<br>";										
+							echo "Rok życia : ".$row['Rok_Zycia'].", Choroba : ".$row['choroba']." " . $row["Rodzaj_Choroby"] . "<br>";										
 						}				
 					}
 					
@@ -241,25 +258,76 @@
 					{
 						//echo "<br>";
 						
-						$row = $kzu_wf_result->fetch_assoc();
-						
-					//echo "<b>choroba : </b><br>";
-						echo "Data : ".$row['Data'] . "<br>Grupa : " . $row['Grupa'] . "<br>Zalecenia : ".$row['Zalecenia']."<br>";							
-								
+						/*$row = $kzu_wf_result->fetch_assoc();								
+						echo "Data : ".$row['Data'] . "<br>Grupa : " . $row['Grupa'] . "<br>";						
+						if($row['Zalecenia'] != "")
+						{
+							echo "Zalecenia : ".$row['Zalecenia']."<br>";	
+						}						
 						$kzu_wf_data = $row['Data'];
 						$kzu_wf_grupa = $row['Grupa'];
-						$kzu_wf_zalecenia = $row['Zalecenia'];			
+						$kzu_wf_zalecenia = $row['Zalecenia'];*/
+
+						
+						while($row = $kzu_wf_result->fetch_assoc())
+						{
+							//echo "<br>";
+							echo "Data : ".$row['Data'] . "<br>Grupa : " . $row['Grupa'] . "<br>";
+							
+							if($row['Zalecenia'] != "")
+							{
+								echo "Zalecenia : ".$row['Zalecenia']."<br>";	
+							}								
+						}		
+					}				
+					else 
+					{ 
+						echo "[ brak ]";						
+					}   		
+				}
+			}			
+			//$conn->close();	
+			
+			
+			/////////////////////////////////////////////////////////////////////////////////////////////////////
+			// Wywiady środowiskowe
+			
+			if(isset($id_karty))
+			{
+				$get_kzu_wf = "SELECT * FROM kzu_wywiady_srodowiskowe WHERE Id_Karty = $id_karty";  // a co dany uczeń nie ma założonej karty ? -> do rozwiązania w przyszłości						
+			
+				$sql = $conn->query($get_kzu_wf);
+				
+				if($sql) // znaleziono kartę
+				{
+					$kzu_number_of_rows = $sql->num_rows;
+					
+					echo "<br><b>Wywiady środowiskowe : </b><br>";
+					
+					if($kzu_number_of_rows>0)
+					{
+						//echo "<br>";
+						
+						$row = $sql->fetch_assoc();
+						
+					
+						echo "Data : ".$row['Data'] . "<br>Wnioski : " . $row['Wnioski'] . "<br>";										
 					}				
 					else 
 					{ // nie znaleziono rekordów w bd
 							
 											//$_SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';	
 											//header('Location: index.php');
-						echo "[ brak ]";						
+						echo "[ brak ]<br>";						
 					}   		
 				}
 			}			
-			$conn->close();				
+			$conn->close();	
+
+			if(isset($id_karty))
+			{
+				echo '<br><a href="wyswietl_badanie.php?student_id='.$student_id.'&id_karty='.$id_karty.'&class_id='.$class_id.'">Badania przesiewowe</a>';
+			}	
 		}				
 	?>	
 		
