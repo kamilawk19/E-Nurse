@@ -20,8 +20,8 @@ DO ZROBIENIA :
 	• Podstrona z wysłaniem masowych powiadomień na email
 	• Podstrona z wysłaniem masowych powiadomień na edziennik
 
-	• Podstrona z widokiem wpisów dziennika codziennego			(Kamila)
-	• Podstrona z widokiem dodania wpisu dziennika codziennego
+	• Podstrona z widokiem wpisów dziennika codziennego	
+	• Podstrona z widokiem dodania wpisu dziennika codziennego		(Kamila)
 	• Podstrona z widokiem usunięcia wpisu dziennika codziennego
 	• Podstrona z widokiem edycji wpisu dziennika codziennego
 	
