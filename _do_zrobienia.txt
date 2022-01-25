@@ -11,11 +11,11 @@ DO ZROBIENIA :
 
 	• Podstrona z widokiem home page (Mikołaj)
 
-	• Podstrona z widokiem wszystkich klas 				       (Kuba)
-	• Podstrona z widokiem wybranej klasy 				       (Kuba)
+	• Podstrona z widokiem wszystkich klas 				       (Kuba) ✓
+	• Podstrona z widokiem wybranej klasy 				       (Kuba) ✓
 	
-	• Podstrona z widokiem informacji o danym uczniu
-	• Podstrona z widokiem dodania badania, do konkretnego ucznia
+	• Podstrona z widokiem informacji o danym uczniu			(Kuba) ✓
+	• Podstrona z widokiem dodania badania, do konkretnego ucznia                  ✓
 
 	• Podstrona z wysłaniem masowych powiadomień na email
 	• Podstrona z wysłaniem masowych powiadomień na edziennik
@@ -23,12 +23,12 @@ DO ZROBIENIA :
 	• Podstrona z widokiem usunięcia wpisu dziennika codziennego		(Kamila)
 	• Podstrona z widokiem edycji wpisu dziennika codziennego		(Kamila)
 	
-	• Podstrona z widokiem badania przesiewowego konkretnego ucznia
-	• Podstrona z widokiem dodania badania przesiewowego konkretnego ucznia
-	• Podstrona z widokiem edycji badania przesiewowego konkretnego ucznia
+	• Podstrona z widokiem badania przesiewowego konkretnego ucznia		(Kuba) ✓
+	• Podstrona z widokiem dodania badania przesiewowego konkretnego ucznia (Kuba) ✓
+	• Podstrona z widokiem edycji badania przesiewowego konkretnego ucznia         -
 
 	• Możliwość edytowania danych przez użytkowników (...zamiana banych w BD, na nowe wprowadzone przez użytkownika, popbrane z formularza metodą GET/POST)
-	• Możliwość edytowania danych uczniów
+	• Możliwość edytowania danych uczniów 
 	
 	• Podstrona z generowaniem pliku z kzu i dziennika codzinnego
 	
