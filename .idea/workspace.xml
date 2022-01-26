@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3234f2fd-9ac3-4a1b-93b5-d97e408fc7c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e9f0f4ed-9f63-47f2-98eb-64608f19cdec.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e9f0f4ed-9f63-47f2-98eb-64608f19cdec/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e9f0f4ed-9f63-47f2-98eb-64608f19cdec/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e9f0f4ed-9f63-47f2-98eb-64608f19cdec/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+    <list default="true" id="3234f2fd-9ac3-4a1b-93b5-d97e408fc7c1" name="Changes" comment="podłączony front wchodzimy do strony za pomocą /front/index.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie.php" beforeDir="false" afterPath="$PROJECT_DIR$/badanie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dziennik.php" beforeDir="false" afterPath="$PROJECT_DIR$/dziennik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/klasa.php" beforeDir="false" afterPath="$PROJECT_DIR$/klasa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logowanie.php" beforeDir="false" afterPath="$PROJECT_DIR$/logowanie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wybor_szkoly.php" beforeDir="false" afterPath="$PROJECT_DIR$/wybor_szkoly.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/front/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +67,16 @@
       <workItem from="1642610575950" duration="634000" />
       <workItem from="1642689652075" duration="679000" />
       <workItem from="1642698763647" duration="21000" />
-      <workItem from="1643197275418" duration="4947000" />
+      <workItem from="1643197275418" duration="6959000" />
     </task>
+    <task id="LOCAL-00001" summary="podłączony front wchodzimy do strony za pomocą /front/index.php">
+      <created>1643202315454</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643202315454</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,5 +93,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="podłączony front wchodzimy do strony za pomocą /front/index.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="podłączony front wchodzimy do strony za pomocą /front/index.php" />
   </component>
 </project>

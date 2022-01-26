@@ -44,18 +44,19 @@ if(!isset($_SESSION['zalogowany']))
     <div class="navbar__buttons-container">
         <a class="" href="notifications.html"><img class="notiffication_img img-fluid" src="images/notification.svg"></a>
         <a class="" href="setting.html"><img class="setting_img img-fluid" src="images/setting.svg"></a>
-        <a class="btn-blue--filled" href="#">Wyloguj się</a>
+        <a class="btn-blue--filled" href="../logout.php">Wyloguj się</a>
     </div>
 </nav>
 
 <div class="container">
 
     <header>
-        <a class="col-md-3 offset-md-1 btn-back" href="choose_school.html"><img src="images/Arrow.svg"><h3>Zmień szkołę</h3></a>
+        <a class="col-md-3 offset-md-1 btn-back" href="choose_school.php"><img src="images/Arrow.svg"><h3>Zmień szkołę</h3></a>
         <?php
         //echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';
 
         echo '<h1 class="col-md-4">Witaj '.$_SESSION['imie'].'!</h1>';
+        echo '<h3 class="col-md-12">ID = '.$school_id.'</h3>';
         //echo $x;
         //echo "Wybrałeś szkołę o id =" . $school_id . " ";
         // dodatkowy warunek do zaimplemenotwania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php
