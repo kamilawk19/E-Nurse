@@ -3,7 +3,7 @@
 	session_start();
 	if(!isset($_SESSION['zalogowany']))
 	{
-		header('Location: /front/index.php');
+		header('Location: /front/index.php'); 
 		exit();
 	}
 ?>
@@ -13,8 +13,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>E-nurse - strona główna</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
+<script type="text/javascript">
+    function re(idd){
+        window.location.href = "dziennik_edytuj_wpis.php?re="+idd;
+    };
+
+    function rd(idd){
+        var warning="Czy jesteś pewien, że chcesz usunąć wpis o numerze "+idd.slice(1,2)+"?";
+        if (confirm(warning)) {
+            window.location.href = "dziennik_usun_wpis.php?rd="+idd;
+        }
+    };
+
+
+
+</script>
+
 	<div id="container">
 	
 		<div id="header">
@@ -37,6 +55,18 @@
 		
 		<div id="content">
 			<?php	
+
+                //alert od usuniecia danych
+                if(isset($_GET['err'])){
+                    if($_GET["err"]==0){
+                        echo "<script type='text/javascript'>alert('Usunięto wpis')</script>";
+                    }
+                    if($_GET["err"]==1){
+                        echo "<script type='text/javascript'>alert('Nie udało się usunąć wpisu')</script>";
+                    }
+                }
+
+
 
 				//pobranie info z e-nurse
 				$school_id = $_SESSION['school_id'];
@@ -119,7 +149,7 @@
 				echo "Wybrałeś szkołę: " . $school_name . " ";
 				// dodatkowy warunek do zaimplementowania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
 				
-				echo '<button id="redirect_add" class="submit-button" >Dodaj badanie</button><br>';
+				echo '<button id="redirect_add" class="submit-button" >Dodaj wpis</button><br>';
 				echo "<h2>Dziennik codzienny </h2>";
 
 				for($i=0; $i<count($id_klasy);$i++){
@@ -155,7 +185,7 @@
 				for($i=0;$i<count($numer);$i++){
 
 					if($i==0){
-						echo"<tr> <th>Numer wpisu</th> <th>Data</th> <th>Klasa</th> <th>Uczeń</th> <th>Opis</th> <th>Co podano</th> <th>Pielęgniarka</th> </tr>";
+						echo"<tr> <th>Numer wpisu</th> <th>Data</th> <th>Klasa</th> <th>Uczeń</th> <th>Opis</th> <th>Co podano</th> <th>Pielęgniarka</th>  <th></th> </tr>";
 					}
 
 					echo "<tr>";
@@ -166,6 +196,7 @@
 					echo "<td>".$opis[$i]."</td>";
 					echo "<td>".$podano[$i]."</td>";
 					echo "<td>".$autor[$i]."</td>";
+					echo "<td><button onclick='re(this.id);' class='redirect_button_edit' id='r".$numer[$i]."'>Edytuj</button><br><button onclick='rd(this.id);' class='redirect_button_delete' id='d".$numer[$i]."'>Usuń</button><br></td>";
 					echo "</tr>";
 				}
 				echo "</table>";
@@ -180,12 +211,13 @@
 		
 	</div>
 
-<!--skrypt z js ->
-
+//skrypt z js
 <script type="text/javascript">
+
     document.getElementById("redirect_add").onclick = function () {
         location.href = "dziennik_dodaj_wpis.php";
     };
+
 </script>
 
 </body>
