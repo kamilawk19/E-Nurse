@@ -4,7 +4,7 @@ session_start();
 
 if((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
 {
-	header('Location: index.php'); 
+	header('Location: /front/index.php');
 	exit();
 }
 
@@ -43,18 +43,18 @@ else
 				$_SESSION['nazwisko'] = $row['Nazwisko'];					
 				unset($_SESSION['blad']);
 				$result->free_result(); // close(); free(); ... free_result();			
-				header('Location: wybor_szkoly.php');  
+				header('Location: ./front/choose_school.php');
 			}			
 			else 
 			{				
 				$_SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';
-				header('Location: index.php');				
+				header('Location: /front/index.php');
 			}				
 		}		
 		else 
 		{ 				
 			$_SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';	
-			header('Location: index.php');				
+			header('Location: /front/index.php');
 		}       
     }
 	

@@ -5,7 +5,7 @@
 	
 	if(!isset($_SESSION['zalogowany'])) // jeśli wejdziemy na stronę główną a nie jesteśmy zalogowani ....
 	{
-		header('Location: index.php'); // wypierdalaj na index.php
+		header('Location: /front/index.php'); // wypierdalaj na index.php
 		exit();
 	}
 ?>
@@ -45,7 +45,7 @@
 		
 		<div id="nav">
 			<?php
-				echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
+				echo '<a href="/front/main.php?school_id='.$school_id.' ">Strona główna</a><br>';
 				echo '<a href="klasy.php?school_id='.$school_id.' ">Klasy</a><br>';
 				echo '<a href="dziennik.php?school_id='.$school_id.' ">Dziennik codzienny</a><br>';
 			?>

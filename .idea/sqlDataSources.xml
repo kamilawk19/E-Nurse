@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="10adf7c3-5c0e-4676-beac-4be56dad21be" />
+          <option name="name" value="e-nurse" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/sql_files/e-nurse.sql" />
+            </array>
+          </option>
+          <option name="scriptOptions">
+            <map>
+              <entry key="QualifyWithSchema" value="ALWAYS" />
+            </map>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

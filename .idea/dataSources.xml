@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MySQL - phptest@localhost" uuid="e9f0f4ed-9f63-47f2-98eb-64608f19cdec">
+    <data-source source="LOCAL" name="e-dziennik.sql@localhost" uuid="2a7dacfb-42e9-4853-a17e-961afa36a07a">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/phptest</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/e-dziennik.sql</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="e-nurse@localhost" uuid="27a32134-6936-4fd8-b2ff-a914d7b81142">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/e-nurse</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

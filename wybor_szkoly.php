@@ -103,7 +103,7 @@
 					
 					while($row = $result->fetch_assoc())
 					{										
-						echo '<a href="main.php?school_id='.$row['Id'].' ">';				
+						echo '<a href="main.php?school_id='.$row['Id'].' ">';
 						echo $row["Name"];
 						echo '</a><br><br>';									
 						//$id = $row['Id'];

@@ -8,7 +8,6 @@
 		exit(); // zakończ wykonywanie skryptu - opuszczamy plik index.php
 	}
 ?>
-
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
