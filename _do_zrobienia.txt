@@ -11,20 +11,9 @@ DO ZROBIENIA :
 
 	• Podstrona z widokiem home page (Mikołaj)
 
-	• Podstrona z widokiem wszystkich klas 				       (Kuba) ✓
-	• Podstrona z widokiem wybranej klasy 				       (Kuba) ✓
-	
-	• Podstrona z widokiem informacji o danym uczniu			(Kuba) ✓
-	• Podstrona z widokiem dodania badania, do konkretnego ucznia                  ✓
-
 	• Podstrona z wysłaniem masowych powiadomień na email
 	• Podstrona z wysłaniem masowych powiadomień na edziennik
-
-	• Podstrona z widokiem usunięcia wpisu dziennika codziennego		(Kamila)
-	• Podstrona z widokiem edycji wpisu dziennika codziennego		(Kamila)
 	
-	• Podstrona z widokiem badania przesiewowego konkretnego ucznia		(Kuba) ✓
-	• Podstrona z widokiem dodania badania przesiewowego konkretnego ucznia (Kuba) ✓
 	• Podstrona z widokiem edycji badania przesiewowego konkretnego ucznia         -
 
 	• Możliwość edytowania danych przez użytkowników (...zamiana banych w BD, na nowe wprowadzone przez użytkownika, popbrane z formularza metodą GET/POST)
@@ -55,3 +44,12 @@ ZROBIONO:
 	✓ Uzupełnienie danymi bazy e-nurse	20.01.2022	Kamila Krzyżaniak
 	✓ Podstrona z widokiem wpisów dziennika codziennego	23.01.2022	Kamila Krzyżaniak
 	✓ Podstrona z widokiem dodania wpisu dziennika codziennego	23.01.2022	Kamila Krzyżaniak
+	✓ Podstrona z widokiem usunięcia wpisu dziennika codziennego			Kamila Krzyżaniak
+	✓ Podstrona z widokiem edycji wpisu dziennika codziennego			Kamila Krzyżaniak
+	✓ Podstrona z widokiem badania przesiewowego konkretnego ucznia			Jakub Wojciechowski
+	✓ Podstrona z widokiem dodania badania przesiewowego konkretnego ucznia		Jakub Wojciechowski
+	✓ Podstrona z widokiem wszystkich klas						Jakub Wojciechowski
+	✓ Podstrona z widokiem wybranej klasy						Jakub Wojciechowski
+	✓ Podstrona z widokiem informacji o danym uczniu				Jakub Wojciechowski
+	✓ Podstrona z widokiem dodania badania, do konkretnego ucznia			Jakub Wojciechowski
+	

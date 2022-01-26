@@ -5,7 +5,7 @@
 	
 	if(!isset($_SESSION['zalogowany']))
 	{
-		header('Location: index.php'); 
+		header('Location: /front/index.php'); 
 		exit();
 	}
 ?>
@@ -32,7 +32,7 @@
 
         <?php
             //echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
-            echo '<a href="main.php">Strona główna</a><br>';
+            echo '<a href="/front/main.php">Strona główna</a><br>';
             echo '<a href="klasy.php">Klasy</a><br>';
             echo '<a href="dziennik.php">Dziennik codzienny</a><br>';
         ?>
@@ -101,7 +101,7 @@
             <input type='text' id='nazwisko' name='nazwisko'><br><br>
 
             <label for='opis'>Opis</label><br>
-            <textarea id='opis' name='opis' rows='10' style='resize: none'></textarea><br><br>
+            <textarea id='opis' name='opis' rows='10' style='resize: none' required></textarea><br><br>
 
             <label for='podano'>Podano</label><br>
             <textarea id='podano' name='podano' rows='4' style='resize: none'></textarea><br><br>
