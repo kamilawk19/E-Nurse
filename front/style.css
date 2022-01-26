@@ -287,7 +287,7 @@ a:hover{
 .peach_vector-main{
     position: absolute;
     top: 1rem;
-    left: 70%;
+    right: 1rem;
     z-index: -1;
 }
 .blue_vector{
@@ -299,14 +299,19 @@ a:hover{
 .blue_vector-main{
     position: absolute;
     top: 13.125rem;
-    left: 0.75rem;
+    left: 1rem;
     z-index: -1;
 }
 
 /* Header */
 header h1{
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+header h3{    
+    text-align: center;
+    padding-bottom: 3rem;
 }
 
 /* Main Page */
@@ -333,13 +338,15 @@ header h1{
 }
 .journal_main{
     padding: 2rem;
-    gap: 2vw;
+    gap: 3vw;
 }
 .journal_main h2{
     padding-top: 0.2rem;
 }
 .journal_main a{
     background-color: #FBC7A8;
+    min-width: 13.4rem;
+    max-height: 3.625rem;
 }
 .journal_main a:hover{
     background-color: #FCD9C5;
@@ -361,6 +368,11 @@ header h1{
     text-align: center;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
     border-radius: 23px;
+}
+.recent_class p{
+    font-size: 0.9rem;
+    margin-bottom: 0.4vw;
+    padding: 0 0.5rem;
 }
 #recent_class1{
     background-color: #6D9AC5;
