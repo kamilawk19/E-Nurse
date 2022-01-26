@@ -42,7 +42,7 @@
 		<div id="nav">			
 			<?php
 				//echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
-				echo '<a href="/front/main.php">Strona główna</a><br>';
+				echo '<a href="front/main.php">Strona główna</a><br>';
 				echo '<a href="klasy.php">Klasy</a><br>';
 				echo '<a href="dziennik.php">Dziennik codzienny</a><br>';
 			?>	
