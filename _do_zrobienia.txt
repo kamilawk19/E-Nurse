@@ -1,48 +1,65 @@
 
 
-DO ZROBIENIA : 
+DO ZROBIENIA - BACKEND: 
 
-	! Wybór szkoły, w której pielęgniarka będzie operować na danych - TUŻ PO ZALOGOWANIU (Mikołaj)
-	+-(extra) Wyświetlanie samouczka po pierwszym logowaniu (...)
-	+-(extra) Podstrona z wiadomościami
-	• (extra) Podstrona z widokiem resetowania hasła
-	• (extra) Podstrona z kalendarzem
-	• (extra) Tworzenie automatyczne back-up (generowanie pliku z danymi z bazy danych)
+	• Podstrona z wysłaniem masowych powiadomień z wyborem: na email lub/oraz edziennik.
+	Opis:	Możliwość wysłania powiadomienia do ucznia (Przychowywanie powiadomień w BD dla danych uczniów - pobieranie ich z BD i wyświetlanie po stronie e-dziennika)
+	Wysyłanie wiadomości dla rodziców i uczniów (stworzenie nowej tabeli na wiadomości - po stronie e-dzinnika i e-nurse: przeglądanie, usuwanie, dodawanie wiadomości)
+	
+	• Wysyłanie masowych powiadomień na email.
+	• Wysyłanie masowych powiadomień na edziennik.
+	• Obsługa odbierania powiadmień na edziennik. 
+	• Podstrona z wglądem do wysłanych powiadomień przez pielęgniarkę.
+	
+	
+	• Podstrona z widokiem resetowania hasła.
+	
+	• Podstrona z widokiem kalendarza.
+	• Dodanie wydarzenia do kalendarza.
+	• Edycja wydarzenia w kalendarzu.
+	• Usunięcie wydarzenia w kalendarzu.
+	
+	• Tworzenie automatyczne back-up (generowanie pliku z danymi z bazy danych)
+	Opis: Skrpyt, który będzie robił załózmy codziennie o północy back-up. Backup różnicowy najlepiej.
+	
+	• Podstrona z widokiem edycji badania przesiewowego konkretnego ucznia.
+	
+	• Podstrona z rejestracją pielęgniarki.
+	• Weryfikacja danych wejściowych z formularza rejestracji pod kątem zagrożeń, np. sql injection.
 
-	• Podstrona z widokiem home page (Mikołaj)
-
-	• Podstrona z wysłaniem masowych powiadomień na email
-	• Podstrona z wysłaniem masowych powiadomień na edziennik
+	• Możliwość edytowania danych przez użytkowników (...zamiana banych w BD, na nowe wprowadzone przez użytkownika, pobrane z formularza metodą GET/POST)
+	• Możliwość edytowania danych uczniów.
 	
-	• Podstrona z widokiem edycji badania przesiewowego konkretnego ucznia         -
-
-	• Możliwość edytowania danych przez użytkowników (...zamiana banych w BD, na nowe wprowadzone przez użytkownika, popbrane z formularza metodą GET/POST)
-	• Możliwość edytowania danych uczniów 
+	• Podstrona z generowaniem pliku KZU.
+	Opis: Wystarczy button 'Pobierz pdf' w odpowiednim miejscu.
+	• Generowanie dokumentu KZU z bazy danych.
 	
-	• Podstrona z generowaniem pliku z kzu i dziennika codzinnego
+	• Podstrona z generowaniem raportu z dziennika codzinnego.
+	Opis: Wystarczy button 'Pobierz pdf' w odpowiednim miejscu.
+	• Generowanie raportu z dziennika codziennego z bazy danych.
 	
-	Side note
-	• ! Możliwość wysłania powiadomienia do ucznia (Przychowywanie powiadomień w BD dla danych uczniów - pobieranie ich z BD i wyświetlanie po stronie e-dziennika)
-	• Wysyłanie wiadomości dla rodziców i uczniów (stworzenie nowej tabeli na wiadomości - po stronie e-dzinnika i e-nurse: przeglądanie, usuwanie, dodawanie wiadomości)
-
-GENEROWANIE I POBIERANIE DOKUMENTÓW :
-	• Generowanie dokumentu z kzu z bazy danych dla danej pielęgniarki
-	• Pobieranie dokumentu z kzu z bazy danych dla danej pielęgniarki
+	Side note: Eksportowanie dokumentów do formatu pdf.
 	
-	• Generowanie dokumentu z dziennika codziennego z bazy danych dla danej pielęgniarki
-	• Pobieranie dokumentu z dziennika codziennego z bazy danych dla danej pielęgniarki
+	• Analiza dokumentów, które można jeszcze wygenerować z dostępnych danych dla pielęgniarki (Kamila)
 	
-	• (extra) Wyświetlenie dokumentu w przeglądarce
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+DO ZROBIENIA - FRONTEND:
 	
-	• Eksportowanie dokumentów do .pdf (JS)
+	• Stworzenie widoków do potrzebnych nowych funkcjonalności.
+	
+	• Kontynuacja tworzenia jednolitego UI w projekcie (css).
+	
+	• Tworzenie nowych stylów dla nowopowstałych podstron.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 ZROBIONO:
-	✓ System Logowania			15.12.2021	Jakub Wojciechowski
-	✓ Uzupełnienie danymi bazy e-dziennik	07.01.2022	Kamila Krzyżaniak
-	✓ Dodanie baz danych do 000webhost	13.01.2022	Kamila Krzyżaniak 	Uwaga: Ograniczenie w 000webhost. Nie mogę stworzyć kluczy obcych do tabeli z innej bazy danych.
-	✓ Uzupełnienie danymi bazy e-nurse	20.01.2022	Kamila Krzyżaniak
-	✓ Podstrona z widokiem wpisów dziennika codziennego	23.01.2022	Kamila Krzyżaniak
+	✓ System Logowania						15.12.2021	Jakub Wojciechowski
+	✓ Wybór szkoły, w której pielęgniarka będzie operować na danych - TUŻ PO ZALOGOWANIU	Mikołaj
+	✓ Uzupełnienie danymi bazy e-dziennik				07.01.2022	Kamila Krzyżaniak
+	✓ Dodanie baz danych do 000webhost				13.01.2022	Kamila Krzyżaniak
+	Uwaga: Ograniczenie w 000webhost. Nie mogę stworzyć kluczy obcych do tabeli z innej bazy danych.
+	✓ Uzupełnienie danymi bazy e-nurse				20.01.2022	Kamila Krzyżaniak
+	✓ Podstrona z widokiem wpisów dziennika codziennego		23.01.2022	Kamila Krzyżaniak
 	✓ Podstrona z widokiem dodania wpisu dziennika codziennego	23.01.2022	Kamila Krzyżaniak
 	✓ Podstrona z widokiem usunięcia wpisu dziennika codziennego			Kamila Krzyżaniak
 	✓ Podstrona z widokiem edycji wpisu dziennika codziennego			Kamila Krzyżaniak
@@ -52,4 +69,6 @@ ZROBIONO:
 	✓ Podstrona z widokiem wybranej klasy						Jakub Wojciechowski
 	✓ Podstrona z widokiem informacji o danym uczniu				Jakub Wojciechowski
 	✓ Podstrona z widokiem dodania badania, do konkretnego ucznia			Jakub Wojciechowski
+	✓ Uzupełnienie pliku z zadaniami w oparciu o wybrane funkcjonalności	07.03.2022	Kamila Krzyżaniak
+	✓ Podstrona z widokiem home page 						Mikołaj
 	
