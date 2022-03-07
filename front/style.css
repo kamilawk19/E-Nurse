@@ -49,6 +49,18 @@ h5{
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
+h6{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
 p{
     font-family: Open Sans;
     font-size: 1.125rem;
@@ -120,6 +132,16 @@ a:hover{
     background: #B8D9F4;
 }
 
+.btn-white{
+    height: 2.75rem;
+    width: 14rem;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 23px;
+    background-color: white;
+    color: #646464;
+}
+
 .btn-back{
     display: flex;
     color: #646464;
@@ -182,14 +204,12 @@ a:hover{
     background-color: white;
 }
 .form{
-    padding: 10vh 0;
+    padding: 8vh 0;
     text-align: center;
 }
 .form h1{
-    padding-bottom: 3.25rem;
-}
-.form h3{
-    padding-bottom: 3.625rem;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
 }
 .form a{
     padding-bottom: 2.625rem;
@@ -252,7 +272,7 @@ a:hover{
 .update img{
     padding-left: 3vw;
     padding-bottom: 0.5rem;
-    max-height: 35rem;
+    max-height: 30rem;
 }
 
 /* Reset password */
@@ -389,4 +409,62 @@ header h3{
     font-weight: bold;
 }
 
+/* Classes */
+.classes{
+    padding: 1.5rem;
+}
+.sort_filtr{
+    display:flex;
+    margin: 1rem 0;
+    gap: 2rem;
+}
+.sort_filtr h3{
+    margin-top: 0.6rem;
+}
+.level{
+    display: flex;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+.class{
+    width: 8.125rem;
+    height: 8.125rem;
+    padding: 0.35rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+}
+.class p{
+    font-size: 0.9rem;
+    margin-bottom: 0.4vw;
+    padding: 0 0.5rem;
+}
+#class_0{
+    background-color: #568ABB;
+}
+#class_1{
+    background-color: #6697c2;
+}
+#class_2{
+    background-color: #7CA6CB;
+}
+#class_3{
+    background-color: #A7D0F1;
+}
+#class_4{
+    background-color: #B8D9F4;
+}
+#class_5{
+    background-color: #CAE3F7;
+}
+#class_6{
+    background-color: #FBC7A8;
+}
+#class_7{
+    background-color: #FCD9C5;
+}
+#class_8{
+    background-color: #FDE6D8;
+}
 

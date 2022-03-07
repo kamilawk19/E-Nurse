@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3234f2fd-9ac3-4a1b-93b5-d97e408fc7c1" name="Changes" comment="" />
+    <list default="true" id="3234f2fd-9ac3-4a1b-93b5-d97e408fc7c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_01_2022_17_43_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_01_2022_12_42_[Changes]/shelved.patch" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +69,7 @@
       <workItem from="1642698763647" duration="21000" />
       <workItem from="1643197275418" duration="4947000" />
       <workItem from="1643206587657" duration="1088000" />
+      <workItem from="1646651871332" duration="15000" />
     </task>
     <servers />
   </component>
