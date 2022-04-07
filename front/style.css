@@ -574,3 +574,24 @@ header h3{
     margin-left: 1vw;
 }
 
+/* Badanie przesiewowe */
+.bold_info{
+    font-weight: 600;
+}
+.bold_title{
+    font-weight: 700;
+}
+.badanie_group{
+    margin-top: 4rem;
+}
+.subtitle_name{
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
+.badanie_edit{
+    margin-top: 2.5rem;
+    margin-left: 3vw;
+}
+.badanie_edit a{
+    padding: 0.85rem 3rem 0.7rem 3rem;
+}
