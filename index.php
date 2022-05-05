@@ -18,6 +18,8 @@
 
 
 <body>
+	
+	<a href="rejestracja.php"> Zarejestruj się </a><br><br>
 
 	<p>Zaloguj się do systemu E-nurse</p>
 
