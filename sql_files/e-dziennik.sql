@@ -172,19 +172,19 @@ CREATE TABLE `class` (
 --
 
 INSERT INTO `class` (`Id`, `Class`, `Profile`, `Id_School`) VALUES
-(1, 'Klasa 0', NULL, 4),
-(2, 'Klasa 1', NULL, 4),
-(3, 'Klasa 2', NULL, 4),
-(4, 'Klasa 3', NULL, 4),
-(5, 'Klasa 4', NULL, 4),
-(6, 'Klasa 5', NULL, 4),
-(7, 'Klasa 6', NULL, 4),
-(8, 'Klasa 7', NULL, 4),
-(9, 'Klasa 8', NULL, 4),
-(10, 'Klasa 1', 'humanistyczna', 5),
-(11, 'Klasa 2', 'humanistyczna', 5),
-(12, 'Klasa 3', 'humanistyczna', 5),
-(13, 'Klasa 4', 'humanistyczna', 5);
+(1, '0A', NULL, 4),
+(2, '1A', NULL, 4),
+(3, '2A', NULL, 4),
+(4, '3A', NULL, 4),
+(5, '4A', NULL, 4),
+(6, '5A', NULL, 4),
+(7, '6A', NULL, 4),
+(8, '7A', NULL, 4),
+(9, '8A', NULL, 4),
+(10, '1A', 'humanistyczna', 5),
+(11, '2A', 'humanistyczna', 5),
+(12, '3A', 'humanistyczna', 5),
+(13, '4A', 'humanistyczna', 5);
 
 -- --------------------------------------------------------
 
