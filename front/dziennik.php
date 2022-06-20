@@ -57,7 +57,7 @@
         <div class="navbar__buttons-container">
             <a class="" href="notifications.html"><img class="notiffication_img img-fluid" src="images/notification.svg"></a>
             <a class="" href="setting.html"><img class="setting_img img-fluid" src="images/setting.svg"></a>
-            <a class="btn-blue--filled" href="logout.php">Wyloguj się</a>
+            <a class="btn-blue--filled" href="../logout.php">Wyloguj się</a>
         </div>
     </nav>
     <div class="container">
