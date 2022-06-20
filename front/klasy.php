@@ -100,7 +100,7 @@
 							while($row = $result->fetch_assoc())
 							{						
 								//echo '<br><a href="klasa.php?class_id='.$row['Id'].'&school_id='.$school_id.'">';										
-								echo '<div class="level">'
+								echo '<div class="level">';
 								echo '<div class="class" id=class_1>';
                                 echo '<a href="klasa.php?class_id='.$row['Id'].'"><h6>'.$row["Class"].'</h6></a>';
 								echo '</div>';
