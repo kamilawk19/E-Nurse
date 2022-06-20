@@ -56,16 +56,56 @@ if(!isset($_SESSION['zalogowany'])) // jeśli wejdziemy na stronę główną a n
     <div id="container">
         <header>
             <div class="col-md-4 offset-md-4">
-                <h1 class="">Dziennik codzienny</h1>
-                <h3 class="col-md-12">Dodawanie wpisu</h3>
+                <!-- <h1 class="">Dziennik codzienny</h1> -->
+                <!-- <h3 class="col-md-12">Dodawanie wpisu</h3> -->
+                <?php
+
+                    $class_id = $_GET['class_id'];
+                    $school_id = $_GET['school_id'];
+                    $student_id = $_GET['student_id'];
+
+                    require_once "../connect_edziennik.php";
+
+                    $conn = @new mysqli($servername, $username, $password, $dbname);
+
+                    if($conn->connect_errno!=0)
+                    {
+                        echo "Błąd połączenia".$conn->connect_errno()."\n";
+                    }
+                    else
+                    {                     
+                        $sql = "SELECT First_name, Last_Name FROM student WHERE id=$student_id";
+
+                        $result = $conn->query($sql);
+
+                        if($result)
+                        {
+                            $number_of_rows = $result->num_rows;
+
+                            if($number_of_rows>0)
+                            {                            
+                                while($row = $result->fetch_assoc())
+                                {
+                                    echo '<h1 class="col-md-12">'.$row['First_name'].' '. $row['Last_Name'].'</h3>';
+                                }
+                            }
+
+                            else
+                            {
+                                echo "błąd";
+                            }
+                        }
+
+                        $conn->close();
+                    }
+                ?>
+
             </div>
         </header>
         <div class="row col-md-10 offset-md-1">
         <?php
 
-        $class_id = $_GET['class_id'];
-        $school_id = $_GET['school_id'];
-        $student_id = $_GET['student_id'];
+        
 //
 //        echo "Wybrałeś szkołę o id =" . $school_id . "<br>";
 //        echo "Wybrałeś klasę o id =" . $class_id . "<br>";
@@ -77,9 +117,8 @@ if(!isset($_SESSION['zalogowany'])) // jeśli wejdziemy na stronę główną a n
 
         echo ' <a href="klasy.php?school_id='.$school_id.' ">Klasy</a>';*/
 
-        require_once "../connect_edziennik.php";
-
-        $conn = @new mysqli($servername, $username, $password, $dbname);
+        
+        $conn = @new mysqli($servername, $username, $password, $dbname);   
 
         if($conn->connect_errno!=0)
         {
@@ -142,7 +181,7 @@ if(!isset($_SESSION['zalogowany'])) // jeśli wejdziemy na stronę główną a n
                                     </div>
                                 </div>                      
                             </div>
-                        </div>
+                        
                         ';
                     }
                 }
