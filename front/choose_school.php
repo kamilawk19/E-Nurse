@@ -65,7 +65,7 @@ if ($conn->connect_errno != 0) {
         <img class="img-fluid peach_vector" src="images/peach_vector.svg">
         <img class="img-fluid blue_vector" src="images/blue_vector.svg">
 
-        <div class="col-md-4 offset-md-4 background__container">
+        <div class="col-md-6 offset-md-3 background__container">
             <div class="col-md-10 offset-md-1 choose_school_container">
                 <h2>Wybierz placówkę szkolną</h2>
                 <ul class="schools__list">

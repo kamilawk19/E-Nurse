@@ -1,9 +1,9 @@
 <?php
 session_start();
-$school_id = $_GET['school_id'];
+$school_id = $_SESSION['school_id'];
 if(!isset($_SESSION['zalogowany']))
 {
-    header('Location: index.php');
+    header('Location: /front/index.php');
     exit();
 }
 ?>
@@ -96,7 +96,7 @@ if(!isset($_SESSION['zalogowany']))
         <div class="col-md-6 colum_journal_class">
             <div class="journal_main background__container">
                 <h2>Dziennik codzienny</h2>
-                <a class="btn-blue--filled" href="#">Dodaj zdarzenie</a>
+                <a class="btn-blue--filled" href="../dziennik_dodaj_wpis.php">Dodaj zdarzenie</a>
             </div>
             <div class="recent_classes background__container">
                 <h2>Ostatnio przeglądane klasy</h2>
