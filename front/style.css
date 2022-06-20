@@ -141,6 +141,7 @@ a:hover{
     color: #646464;
 }
 
+
 .btn-back{
     display: flex;
     color: #646464;
@@ -429,7 +430,8 @@ header h3{
 }
 .sort_filtr{
     display:flex;
-    margin: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     gap: 2rem;
 }
 .sort_filtr h3{
@@ -692,4 +694,22 @@ header h3{
 
 .just_checkbox input[type=text]{
     margin-top: 1.2rem;
+}
+
+
+/* Dziennik */
+.journal_buttons{
+    margin-bottom: 1rem;
+}
+.journal_buton{    
+    width: 8.5rem;
+    font-weight: bold;
+    margin-right: 1vw;
+}
+.journal_buton-checked{
+    box-shadow: 0px 4px 40px #A7D0F1;
+}
+
+.journal_p{
+    padding: 0;
 }
