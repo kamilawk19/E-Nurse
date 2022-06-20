@@ -1,5 +1,9 @@
 <?php
-	echo "strona główna - main.php";
+
+	//echo '<script>alert("schol id ->"'.$_SESSION['school_id'].');</script>';
+
+
+	
 	
 	session_start();
 	
@@ -8,6 +12,9 @@
 		header('Location: /front/index.php'); // wypierdalaj na index.php
 		exit();
 	}
+
+	//echo '<script>alert("'.$_SESSION['school_id'].'");</script>';
+
 ?>
 
 <html lang="pl">
@@ -35,8 +42,8 @@
     <ul class="navbar__list">
         <?php
         echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item navbar__list-item-current"><h3>Home</h3></li></a>';
-        echo '<a href="../klasy.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Klasy</h3></li></a>';
-        echo '<a href="../dziennik.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Dziennik codzienny</h3></li></a>';
+        echo '<a href="klasy.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Klasy</h3></li></a>';
+        echo '<a href="dziennik.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Dziennik codzienny</h3></li></a>';
         echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Wiadomości</h3></li></a>';
         echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Kalendarz</h3></li></a>';
         ?>
@@ -44,7 +51,7 @@
     <div class="navbar__buttons-container">
         <a class="" href="notifications.html"><img class="notiffication_img img-fluid" src="images/notification.svg"></a>
         <a class="" href="setting.html"><img class="setting_img img-fluid" src="images/setting.svg"></a>
-        <a class="btn-blue--filled" href="logout.php">Wyloguj się</a>
+        <a class="btn-blue--filled" href="../logout.php">Wyloguj się</a>
     </div>
 </nav>
 <div class="container">
@@ -53,7 +60,69 @@
         <a class="col-md-3 offset-md-1 btn-back" href="wybor_szkoly.php"><img src="images/Arrow.svg"><h3>Zmień szkołę</h3></a>
         <div class="col-md-4">
             <h1 class="">Klasy</h1>
-            <h3 class="col-md-12">Zespół Szkół Nr 3 Policach</h3>
+
+            <!-- <h3 class="col-md-12">Zespół Szkół Nr 3 Policach</h3> -->
+
+            <?php
+					//require "connect.php";
+				require "../connect_edziennik.php";
+				//require_once "../connect_edziennik.php";
+					//$conn = @new mysqli($servername, $username, $password, $dbname);
+
+				mysqli_report(MYSQLI_REPORT_STRICT);	
+
+				try 
+				{
+					
+					$polaczenie = new mysqli($servername, $username, $password, $dbname);					
+					 
+					if($polaczenie->connect_errno!=0) // błąd połączenia
+					{						
+						throw new Exception(mysqli_connect_errno()); // rzuć nowy wyjątek			
+					}
+					else // udane polaczenie
+					{		
+						
+						$school_id = $_SESSION['school_id'];
+
+						if($result = $polaczenie->query("SELECT Name FROM school WHERE id=$school_id"))
+						{
+							$ilosc_kategorii = $result->num_rows;							
+
+							if($ilosc_kategorii>0)
+							{		
+
+								while ($row = $result->fetch_assoc()) 
+								{									    
+								    echo '<h3 class="col-md-12">'.$row['Name'].'</h3>';
+								}
+
+								$result->free_result();									
+							}
+							else  // brak zwróconych rekordów
+							{												
+								$_SESSION['blad'] = '<span style="color: red">Nie udało się pobrać danych z bazy danych !</span>';
+								header('Location: /front/index.php');	
+								exit();		  
+							}						
+						}
+						else 
+						{
+							throw new Exception($polaczenie->error);
+
+						}
+
+						$polaczenie->close();
+					}
+				}
+				catch(Exception $e) 
+				{					
+					echo '<div class="error"> [ Błąd serwera. Przepraszamy za niegodności i prosimy o rejestrację w innym terminie! ]</div>';
+
+					echo '<br><span style="color:red">Informacja developerska: </span>'.$e; 
+					exit(); // (?)
+				}     	
+        	?>
 <!--            $_SESSION['school_id']-->
         </div>
     </header>
@@ -72,7 +141,7 @@
         <div class="">
 			<!--content-->
 			<?php
-				require_once "connect_edziennik.php";
+				require_once "../connect_edziennik.php";
 				
 				//echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 				
@@ -101,10 +170,10 @@
 							while($row = $result->fetch_assoc())
 							{						
 								//echo '<br><a href="klasa.php?class_id='.$row['Id'].'&school_id='.$school_id.'">';										
-								
-								echo '<div class="class" id=class_div>';
-									echo '<a href="klasa.php?class_id='.$row['Id'].'"><h6>'.$row["Class"].'</h6></a><br>';
-
+								echo '<div class="level">';
+								echo '<div class="class" id=class_1>';
+                                echo '<a href="klasa.php?class_id='.$row['Id'].'"><h6>'.$row["Class"].'</h6></a>';
+								echo '</div>';
 								echo '</div>';
 								//echo "<br>";
 							}				

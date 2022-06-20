@@ -1,5 +1,4 @@
 <?php
-	echo "dziennik codzienny - dziennik.php";
 	session_start();
 	if(!isset($_SESSION['zalogowany']))
 	{
@@ -48,8 +47,8 @@
         <ul class="navbar__list">
             <?php
             echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item navbar__list-item-current"><h3>Home</h3></li></a>';
-            echo '<a href="../klasy.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Klasy</h3></li></a>';
-            echo '<a href="../dziennik.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Dziennik codzienny</h3></li></a>';
+            echo '<a href="klasy.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Klasy</h3></li></a>';
+            echo '<a href="dziennik.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Dziennik codzienny</h3></li></a>';
             echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Wiadomości</h3></li></a>';
             echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Kalendarz</h3></li></a>';
             ?>
@@ -58,7 +57,7 @@
         <div class="navbar__buttons-container">
             <a class="" href="notifications.html"><img class="notiffication_img img-fluid" src="images/notification.svg"></a>
             <a class="" href="setting.html"><img class="setting_img img-fluid" src="images/setting.svg"></a>
-            <a class="btn-blue--filled" href="logout.php">Wyloguj się</a>
+            <a class="btn-blue--filled" href="../logout.php">Wyloguj się</a>
         </div>
     </nav>
     <div class="container">
@@ -79,7 +78,7 @@
 
 				//pobranie info z e-nurse
 				$school_id = $_SESSION['school_id'];
-				require_once "connect.php";
+				require_once "../connect.php";
 
 				$numer=array();
 				$data=array();
@@ -144,8 +143,8 @@
 					$conn->close();
 				}
 
-				echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
-				require_once "connect_edziennik.php";
+//				echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';
+				require_once "../connect_edziennik.php";
 				$conn = mysqli_connect($servername, $username, $password, $dbname);
 				$sql="SELECT `Name` FROM `school` WHERE `Id`='".$_SESSION['school_id']."'";
 				$result = mysqli_query($conn, $sql);
@@ -154,35 +153,25 @@
 						$school_name=$row["Name"];
 					}
 				}
-                <<<EOD
-                <header>
+
+                echo '<header>
                     <div class="col-md-6 offset-md-3">
                         <h1 class="">Dziennik codzienny</h1>
-                        <h3 class="col-md-12">$school_name</h3>
+                        <h3 class="col-md-12">'.$school_name.'</h3>
                     </div>
-            
                     <div class="col-md-3 badanie_edit_btn">
                         <a id="redirect_add" class="btn-peach--filled submit-button" href="#">Dodaj</a>
                     </div>
                 </header>
-<!--				// dodatkowy warunek do zaimplementowania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		-->
 				 <div class="row col-md-10 offset-md-1 background__container classes">
                     <div class="journal_buttons">
-                        <a href="gen.php/?t=1" class="btn-white journal_buton journal_buton-checked">Dzisiaj</a>
-                        <a class="btn-white journal_buton">Wczoraj</a>       
-                        <a class="btn-white journal_buton">Tydzień</a>       
-                        <a href="gen.php/?t=2" class="btn-white journal_buton">Miesiąc</a>   
-                        <a class="btn-white journal_buton">Rok</a>       
-                        <a href="gen.php/?t=3" class="btn-white journal_buton">Wszystko</a>                     
+                        <button href="gen.php/?t=1" class="btn-white journal_buton journal_buton-checked">Dzisiaj</button>
+                        <button class="btn-white journal_buton">Wczoraj</button>       
+                        <button class="btn-white journal_buton">Tydzień</button>       
+                        <button href="gen.php/?t=2" class="btn-white journal_buton">Miesiąc</button>   
+                        <button class="btn-white journal_buton">Rok</button>       
+                        <button href="gen.php/?t=3" class="btn-white journal_buton">Wszystko</button>                     
                     </div>
-<!--				echo '<button id="redirect_add" class="submit-button" >Dodaj wpis</button><br>';-->
-<!--				echo '<div class="dropdown">-->
-<!--				<button>Generuj plik</button>-->
-<!--				<div class="dropdown-content">-->
-<!--				<a href="gen.php/?t=1">Z dzisiaj</a>-->
-<!--				<a href="gen.php/?t=2">Z tego miesiąca</a>-->
-<!--				<a href="gen.php/?t=3">Z całego okresu</a></div></div>';-->
-<!--				echo "<h2>dziennik codzienny </h2>";-->
                     <div class="sort_filtr">   
                         <h3>Sortuj</h3>
                         <div class="dropdown">
@@ -193,7 +182,7 @@
                             </div>
                         </div>
                     </div>
-				EOD;
+                ';
 
 				for($i=0; $i<count($id_klasy);$i++){
 					if($id_klasy[$i]!="NULL"){
@@ -228,46 +217,43 @@
 				for($i=0;$i<count($numer);$i++){
 
 					if($i==0){
-                        <<<EOD
+                        echo '
                         <div class="row titles">
                             <p class="col-md-1 title">Nr</p>
-                            <p class="col-md-3 journal_title">Data</p>
+                            <p class="col-md-2 journal_title">Data</p>
                             <p class="col-md-1 journal_title">Klasa</p> 
-                            <p class="col-md-2 journal_title">Uczeń</p>  
+                            <p class="col-md-1 journal_title">Uczeń</p>  
                             <p class="col-md-3 journal_title">Opis</p>    
-                            <p class="col-md-3 journal_title">Co podano</p>
-                            <p class="col-md-2 journal_title">Pielęgniarka</p>            
+                            <p class="col-md-1 journal_title">Co podano</p>
+                            <p class="col-md-1 journal_title">Pielęgniarka</p>            
                         </div>
                         <div class="students">
-EOD;
+';
 
 //						echo"<tr> <th>Numer wpisu</th> <th>Data</th> <th>Klasa</th> <th>Uczeń</th> <th>Opis</th> <th>Co podano</th> <th>Pielęgniarka</th>  <th></th> </tr>";
 					}
-                    <<<EOD
-                    <div class="row background__container student">
-                        <p class="col-md-1 title">$numer[$i]</p>
-                        <p class="col-md-3 journal_p">$data[$i]</p>
-                        <p class="col-md-1 journal_p">$klasa[$i]</p>
-                        <p class="col-md-2 journal_p">$uczen[$i]</p>
-                        <p class="col-md-3 journal_p">$opis[$i]</p>    
-                        <p class="col-md-3 journal_p">$podano[$i]</p>
-                        <p class="col-md-2 journal_p">$autor[$i]</p>
-                        <div class="col-md-2 list-buttons">
-                            <a onclick='re(this.id);' class='redirect_button_edit' id='r".$numer[$i]."'>Edytuj</a>
-                        </div>                    
-                    </div>
-EOD;
 
-//					echo "<tr>";
-//					echo "<td>".$numer[$i]."</td>";
-//					echo "<td>".$data[$i]."</td>";
-//					echo "<td>".$klasa[$i]."</td>";
-//					echo "<td>".$uczen[$i]."</td>";
-//					echo "<td>".$opis[$i]."</td>";
-//					echo "<td>".$podano[$i]."</td>";
-//					echo "<td>".$autor[$i]."</td>";
-//					echo "<td><button onclick='re(this.id);' class='redirect_button_edit' id='r".$numer[$i]."'>Edytuj</button><br><button onclick='rd(this.id);' class='redirect_button_delete' id='d".$numer[$i]."'>Usuń</button><br></td>";
-//					echo "</tr>";
+
+					//echo '<a onclick='re(this.id);' class='redirect_button_edit' id='r".$numer[$i]."'>Edytuj</a>'	
+
+                    echo '
+                    <div class="row background__container student">
+                        <p class="col-md-1 title">'.$numer[$i].'</p>
+                        <p class="col-md-2 journal_p">'.$data[$i].'</p>
+                        <p class="col-md-1 journal_p">'.$klasa[$i].'</p>
+                        <p class="col-md-1 journal_p">'.$uczen[$i].'</p>
+                        <p class="col-md-3 journal_p">'.$opis[$i].'</p>    
+                        <p class="col-md-1 journal_p">'.$podano[$i].'</p>
+                        <p class="col-md-1 journal_p">'.$autor[$i].'</p>
+                        <div class="col-md-1 list-buttons">';                       
+
+
+                    echo '<a onclick="re(this.id);" class="redirect_button_edit btn-blue--filled list-btn" id="r'.$numer[$i].'">Edytuj</a>';          
+
+                    echo '</div>                    
+                    </div>';
+					
+
 				}
 				echo "</div>";
 
@@ -282,7 +268,6 @@ EOD;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-//skrypt z js
 <script type="text/javascript">
 
     document.getElementById("redirect_add").onclick = function () {
@@ -290,6 +275,9 @@ EOD;
     };
 
 </script>
+
+
+<script type="text/javascript">    document.getElementById("redirect_add").onclick = function () {        location.href = "dziennik_dodaj_wpis.php";    };</script>
 
 </body>
 </html>
