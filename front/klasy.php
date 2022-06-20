@@ -101,8 +101,8 @@
 							{						
 								//echo '<br><a href="klasa.php?class_id='.$row['Id'].'&school_id='.$school_id.'">';										
 								
-								echo '<div class="class background__container" id=class_div>';
-                                echo '<a class="btn-blue--filled" href="klasa.php?class_id='.$row['Id'].'"><h2>'.$row["Class"].'</h2></a>';
+								echo '<div class="class" id=class_0>';
+                                echo '<a href="klasa.php?class_id='.$row['Id'].'"><h2>'.$row["Class"].'</h2></a>';
 								echo '</div>';
 								//echo "<br>";
 							}				
