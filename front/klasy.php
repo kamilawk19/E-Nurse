@@ -1,5 +1,4 @@
 <?php
-	echo "strona główna - main.php";
 	
 	session_start();
 	
@@ -44,7 +43,7 @@
     <div class="navbar__buttons-container">
         <a class="" href="notifications.html"><img class="notiffication_img img-fluid" src="images/notification.svg"></a>
         <a class="" href="setting.html"><img class="setting_img img-fluid" src="images/setting.svg"></a>
-        <a class="btn-blue--filled" href="logout.php">Wyloguj się</a>
+        <a class="btn-blue--filled" href="../logout.php">Wyloguj się</a>
     </div>
 </nav>
 <div class="container">
@@ -72,7 +71,7 @@
         <div class="">
 			<!--content-->
 			<?php
-				require_once "connect_edziennik.php";
+				require_once "../connect_edziennik.php";
 				
 				//echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się </a>]</p>';	
 				
@@ -102,9 +101,8 @@
 							{						
 								//echo '<br><a href="klasa.php?class_id='.$row['Id'].'&school_id='.$school_id.'">';										
 								
-								echo '<div class="class" id=class_div>';
-									echo '<a href="klasa.php?class_id='.$row['Id'].'"><h6>'.$row["Class"].'</h6></a><br>';
-
+								echo '<div class="class background__container" id=class_div>';
+                                echo '<a class="btn-blue--filled" href="klasa.php?class_id='.$row['Id'].'"><h2>'.$row["Class"].'</h2></a>';
 								echo '</div>';
 								//echo "<br>";
 							}				
