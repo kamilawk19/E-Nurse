@@ -242,7 +242,7 @@
                         <p class="col-md-1 journal_p">'.$podano[$i].'</p>
                         <p class="col-md-1 journal_p">'.$autor[$i].'</p>
                         <div class="col-md-1 list-buttons">
-                            <a id="r"'.$numer[$i].'>Edytuj</a>
+                            <a class="btn-blue--filled list-btn" id="r"'.$numer[$i].'>Edytuj</a>
                         </div>                    
                     </div>
 ';
