@@ -28,9 +28,9 @@ session_start();
     $imie = strtolower($imie);
     $imie = ucfirst($imie);
 
-    $imie2 = $_POST['imie2'];
+    /*$imie2 = $_POST['imie2'];
     $imie2 = strtolower($imie2);
-    $imie2 = ucfirst($imie2);
+    $imie2 = ucfirst($imie2);*/
 
     $nazwisko = $_POST['nazwisko'];
     $nazwisko = strtolower($nazwisko);
@@ -50,18 +50,22 @@ session_start();
 
     //przypadek 1
 
-    if( isset($_POST["klasa"])  && isset($_POST["imie"]) && isset($_POST["imie2"]) && isset($_POST["nazwisko"]) && empty($_POST["klasa"])==0 && empty($_POST["imie"])==0 && empty($_POST["imie2"])==0 && empty($_POST["nazwisko"])==0){
+    if( isset($_POST["klasa"])  && isset($_POST["imie"])  && isset($_POST["nazwisko"]) && empty($_POST["klasa"])==0 && empty($_POST["imie"])==0  && empty($_POST["nazwisko"])==0){
 
         //sprawdzenie, czy dane są ok i ewentualnie wysłanie
 
         $uczen_id=0;
 
-        require_once "connect_edziennik.php";
+        require_once "..\connect_edziennik.php";
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         //czy uczeń istnieje
-        $sql="SELECT `student`.`Id` AS 'uczen_id', `student`.`Class_Id` AS 'class_id' FROM `student` JOIN `class` ON `class`.`Id`=`student`.`Class_Id` WHERE `First_Name`='".$imie."' AND  `Second_Name`='".$imie2."' AND `Last_Name`='".$nazwisko."' AND `class`.`Class`='Klasa ".$klasa."' AND `class`.`Id_school`='".$_SESSION['school_id']."'";
+        $sql="SELECT `student`.`Id` AS 'uczen_id', `student`.`Class_Id` AS 'class_id' FROM `student` JOIN `class` ON `class`.`Id`=`student`.`Class_Id` WHERE `First_Name`='".$imie."' AND `Last_Name`='".$nazwisko."' AND `class`.`Class`='".$klasa."' AND `class`.`Id_school`='".$_SESSION['school_id']."'";
+        
+        //echo '<script>alert("imie ->"+'.$imie."<br>";
+
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0 && mysqli_num_rows($result) < 2) {
+
             while($row = mysqli_fetch_assoc($result)) {
                 $uczen_id=$row["uczen_id"];
                 $class_id=$row["class_id"];
@@ -77,7 +81,7 @@ session_start();
 
         //uczen istnieje i jest tylko 1
         //dodanie do bazy
-        require_once "connect.php";
+        require_once "../connect.php";
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         if($uczen_id!=0){
             $insert="UPDATE `dziennik` SET `Data`='".$date."', `Id_Ucznia`='".$uczen_id."', `Id_Klasy`='".$class_id."', `Id_Szkoly`='".$_SESSION['school_id']."', `Opis_Zdarzenia`='".$opis."', `Co_Podano` ='".$podano."', `Nurse_Id`='".$_SESSION['nurseid']."' WHERE  `Id_Wpisu`='".substr($id,1)."'";
@@ -93,7 +97,7 @@ session_start();
                 exit();
             }
         }
-    }elseif( isset($_POST["klasa"]) && empty($_POST["klasa"])==0 && empty($_POST["imie"])==1 && empty($_POST["imie2"])==1 && empty($_POST["nazwisko"])==1 ){
+    }elseif( isset($_POST["klasa"]) && empty($_POST["klasa"])==0 && empty($_POST["imie"])==1 && empty($_POST["nazwisko"])==1 ){
         //przypadek 2
 
         require_once "connect_edziennik.php";
@@ -136,7 +140,7 @@ session_start();
             }
         }
 
-    }elseif( empty($_POST["klasa"])==1 && empty($_POST["imie"])==1 && empty($_POST["imie2"])==1 && empty($_POST["nazwisko"])==1 ){
+    }elseif( empty($_POST["klasa"])==1 && empty($_POST["imie"])==1 && empty($_POST["nazwisko"])==1 ){
         //przypadek 3
         require_once "connect.php";
         $conn = mysqli_connect($servername, $username, $password, $dbname);

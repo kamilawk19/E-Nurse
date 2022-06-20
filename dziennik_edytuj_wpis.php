@@ -65,8 +65,7 @@
                 <p class="journal_titles">Klasa:</p>
             </div>
             <?php
-                $school_id = $_SESSION['school_id'];
-                echo "<h2>Edycja wpisu</h2> ";
+                $school_id = $_SESSION['school_id'];                
 
                 if( isset($_GET['re']) && !empty($_GET['re'])) {
                     require_once "../connect.php";
@@ -77,6 +76,9 @@
                         while($row = mysqli_fetch_assoc($result)) {
                             $data=$row["Data"];
                             $id_ucznia=$row["Id_Ucznia"];
+
+                            $_SESSION['id_ucznia'] = $row["Id_Ucznia"];
+
                             $id_klasy=$row["Id_Klasy"];
                             $id_szkoly=$row["Id_Szkoly"];
                             $opis=$row["Opis_Zdarzenia"];
@@ -96,7 +98,7 @@
                     }
                 }
 
-                echo "<h4>Operujesz w ramach $school_name</h4>";
+                //echo "<h4>Operujesz w ramach $school_name</h4>";
 
                 if(isset($id_ucznia) && !empty($id_ucznia) && $id_ucznia!=NULL){
                     //pobranie danych ucznia na podstawie id
@@ -130,8 +132,8 @@
                     <input type='datetime-local' id='date' name='date' value='".substr($data,0,10)."T".substr($data,-8,5)."'>";
                     
                     if(!empty($id_ucznia) && $id_ucznia!=NULL){
-                        echo "<input value='.$imie.' type='text' id='imie' name='imie'>
-                        <input value='.$nazwisko.' type='text' id='nazwisko' name='nazwisko'>";
+                        echo "<input value='$imie' type='text' id='imie' name='imie'>
+                        <input value='$nazwisko' type='text' id='nazwisko' name='nazwisko'>";
                     }else{
                     echo "
                         <input type='text' id='imie' name='imie'>
@@ -139,7 +141,7 @@
                     }
 
                     if(!empty($id_klasy) && $id_klasy!=NULL){
-                        echo "<input type='text' id='klasa' name='klasa' value='.$klasa.'>";
+                        echo "<input type='text' id='klasa' name='klasa' value='$klasa'>";
                     }else{
                         echo "<input type='text' id='klasa' name='klasa'>";
                     }
@@ -150,16 +152,21 @@
 				</div>
                 <p>Opis</p>
                 <div class="col-md-12 journal_form journal_form_desc">
-                    <textarea class="journal_buton_text_area" id="opis" name="opis" rows="10" required>"'.$opis.'"</textarea>
+                    <textarea class="journal_buton_text_area" id="opis" name="opis" rows="10" required>'.$opis.'</textarea>
                 </div>
                 <p>Podano</p>
                 <div class="col-md-12 journal_form journal_form_desc">
-                    <textarea class="journal_buton_text_area" id="podano" name="podano" rows="4">"'.$co_podano.'"</textarea>
+                    <textarea class="journal_buton_text_area" id="podano" name="podano" rows="4">'.$co_podano.'</textarea>
                 </div>
                 <div class="col-md-2 offset-md-5 list-buttons">
                     <input class="btn-blue--filled list-btn" type="submit" value="Edytuj">
                 </div> 
+
+                <input type="hidden" id="hidd" name="hidd" value="'.$_GET['re'].'">
+
                 </form>';
+
+
 
                 //pls ostylujcie jakoś ladnie pole do opisu, póki co tylko statycznie jest
                 //i jak przeniesiecie style to jednak pamiętajcie o resize: none dla teaxtarea
