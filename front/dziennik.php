@@ -165,12 +165,12 @@
                 </header>
 				 <div class="row col-md-10 offset-md-1 background__container classes">
                     <div class="journal_buttons">
-                        <a href="gen.php/?t=1" class="btn-white journal_buton journal_buton-checked">Dzisiaj</a>
-                        <a class="btn-white journal_buton">Wczoraj</a>       
-                        <a class="btn-white journal_buton">Tydzień</a>       
-                        <a href="gen.php/?t=2" class="btn-white journal_buton">Miesiąc</a>   
-                        <a class="btn-white journal_buton">Rok</a>       
-                        <a href="gen.php/?t=3" class="btn-white journal_buton">Wszystko</a>                     
+                        <button href="gen.php/?t=1" class="btn-white journal_buton journal_buton-checked">Dzisiaj</button>
+                        <button class="btn-white journal_buton">Wczoraj</button>       
+                        <button class="btn-white journal_buton">Tydzień</button>       
+                        <button href="gen.php/?t=2" class="btn-white journal_buton">Miesiąc</button>   
+                        <button class="btn-white journal_buton">Rok</button>       
+                        <button href="gen.php/?t=3" class="btn-white journal_buton">Wszystko</button>                     
                     </div>
                     <div class="sort_filtr">   
                         <h3>Sortuj</h3>
@@ -222,7 +222,7 @@
                             <p class="col-md-1 title">Nr</p>
                             <p class="col-md-2 journal_title">Data</p>
                             <p class="col-md-1 journal_title">Klasa</p> 
-                            <p class="col-md-2 journal_title">Uczeń</p>  
+                            <p class="col-md-1 journal_title">Uczeń</p>  
                             <p class="col-md-3 journal_title">Opis</p>    
                             <p class="col-md-1 journal_title">Co podano</p>
                             <p class="col-md-1 journal_title">Pielęgniarka</p>            
@@ -237,7 +237,7 @@
                         <p class="col-md-1 title">'.$numer[$i].'</p>
                         <p class="col-md-2 journal_p">'.$data[$i].'</p>
                         <p class="col-md-1 journal_p">'.$klasa[$i].'</p>
-                        <p class="col-md-2 journal_p">'.$uczen[$i].'</p>
+                        <p class="col-md-1 journal_p">'.$uczen[$i].'</p>
                         <p class="col-md-3 journal_p">'.$opis[$i].'</p>    
                         <p class="col-md-1 journal_p">'.$podano[$i].'</p>
                         <p class="col-md-1 journal_p">'.$autor[$i].'</p>
