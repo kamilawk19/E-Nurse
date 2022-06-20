@@ -1,57 +1,67 @@
 <?php
-	echo "dziennik codzienny - dziennik_dodaj_wpis.php";
-	
-	session_start();
-	
-	if(!isset($_SESSION['zalogowany']))
-	{
-		header('Location: /front/index.php'); 
-		exit();
-	}
+
+session_start();
+
+if(!isset($_SESSION['zalogowany']))
+{
+    header('Location: /front/index.php');
+    exit();
+}
 ?>
-	
+
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>E-nurse - dodaj wpis do dziennika codziennego</title>
+    <title>E-Nurse - Dziennik codzienny</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-		
+
 </head>
 
 <body>
-	
+<nav class="navbar">
+
+    <div class="navbar-brand navbar__heading">
+        <img src="images/logo.svg" alt="E-Nurse logo" />
+        <div class="subtitle">
+            <h3>System zarządzania</h3>
+            <h3>medycyną szkolną</h3>
+        </div>
+    </div>
+
+    <ul class="navbar__list">
+        <?php
+        echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item navbar__list-item-current"><h3>Home</h3></li></a>';
+        echo '<a href="klasy.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Klasy</h3></li></a>';
+        echo '<a href="dziennik.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Dziennik codzienny</h3></li></a>';
+        echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Wiadomości</h3></li></a>';
+        echo '<a href="main.php?school_id='.$_SESSION['school_id'].'"><li class="navbar__list-item "><h3>Kalendarz</h3></li></a>';
+        ?>
+    </ul>
+
+    <div class="navbar__buttons-container">
+        <a class="" href="notifications.html"><img class="notiffication_img img-fluid" src="images/notification.svg"></a>
+        <a class="" href="setting.html"><img class="setting_img img-fluid" src="images/setting.svg"></a>
+        <a class="btn-blue--filled" href="../logout.php">Wyloguj się</a>
+    </div>
+</nav>
 <div id="container">
 
-    <div id="header">
-        header		
-    
-    </div>	
-    
-    <div id="nav">			
+    <header>
+        <div class="col-md-4 offset-md-4">
+            <h1 class="">Dziennik codzienny</h1>
+            <h3 class="col-md-12">Dodawanie wpisu</h3>
+        </div>
+    </header>
 
-        <?php
-            //echo '<a href="main.php?school_id='.$school_id.' ">Strona główna</a><br>';
-            echo '<a href="/front/main.php">Strona główna</a><br>';
-            echo '<a href="klasy.php">Klasy</a><br>';
-            echo '<a href="dziennik.php">Dziennik codzienny</a><br>';
-        ?>
-        
-        
-        
-    </div>	
-    
-    <!--<div id="left">
-        left
-    
-    </div>-->
-    
-    <div id="content">
-        <?php	
+    <div class="row col-md-10 offset-md-1 background__container classes">
+        <div class="row">
+            <?php
             $school_id = $_SESSION['school_id'];
-            echo "<h2>Nowy wpis</h2> ";
-            
-            require_once "connect_edziennik.php";
+
+            require_once "../connect_edziennik.php";
             $conn = mysqli_connect($servername, $username, $password, $dbname);
             $sql="SELECT `Name` FROM `school` WHERE `Id`='".$_SESSION['school_id']."'";
             $result = mysqli_query($conn, $sql);
@@ -61,7 +71,6 @@
                 }
             }
 
-            echo "<h4>Operujesz w ramach $school_name</h4>";
 
             //tutaj będą bledy z formularza pokazywane
             echo "<div id='form_info'>";
@@ -83,54 +92,49 @@
             echo "</div>";
 
             //pobieram drugie imie, żeby uniknąć nieprzyjemnej sytuacji, ze jest dwóch uczniów o takim samym imieniu i nazwisku w klasie
-            echo "<form action='./dziennik_validate_form.php' method='post'>
-
-            <label for='date'>Wybierz datę</label><br>
-            <input type='datetime-local' id='date' name='date' value='".date('Y-m-d\TH:i')."'><br>
-            
-            <label for='klasa'>Klasa</label><br>
-            <input type='text' id='klasa' name='klasa'><br><br>
-
-            <label for='imie'>Imię ucznia</label><br>
-            <input type='text' id='imie' name='imie'><br><br>
-
-            <label for='imie2'>Drugie imię ucznia</label><br>
-            <input type='text' id='imie2' name='imie2'><br><br>
-
-            <label for='nazwisko'>Nazwisko ucznia</label><br>
-            <input type='text' id='nazwisko' name='nazwisko'><br><br>
-
-            <label for='opis'>Opis</label><br>
-            <textarea id='opis' name='opis' rows='10' style='resize: none' required></textarea><br><br>
-
-            <label for='podano'>Podano</label><br>
-            <textarea id='podano' name='podano' rows='4' style='resize: none'></textarea><br><br>
-
-            <input type='submit' value='Dodaj wpis'>
-            </form>";
+            echo '
+            <form action="../dziennik_validate_form.php" method="post">
+                <div class="row">
+                    <div class="col-md-1 offset-md-1">
+                        <p class="journal_titles">Data:</p>
+                        <p class="journal_titles">Imię:</p>
+                        <p class="journal_titles">Nazwisko:</p>
+                        <p class="journal_titles">Klasa:</p>
+                    </div> 
+                    <div class="col-md-8 journal_form">              
+                        <input type="datetime-local" id="date" name="date" value="".date("Y-m-d\TH:i")."">
+                        <input type="text" id="klasa" name="klasa">
+                        <input type="text" id="imie" name="imie">
+                        <input type="text" id="nazwisko" name="nazwisko">
+                    </div>
+                </div>
+                
+                <label for="opis">Opis</label><br>
+                <div class="col-md-12 journal_form journal_form_desc">
+                    <textarea class="journal_buton_text_area" id="opis" name="opis" rows="10" required></textarea>
+                </div>
+                
+                <label for="podano">Podano</label><br>
+                <textarea class="journal_buton_text_area" id="podano" name="podano" rows="4" ></textarea><br><br>
+                <div class="col-md-2 offset-md-5 list-buttons">
+                    <input type="submit" class="btn-blue--filled list-btn" value="Dodaj">
+                </div> 
+                </form>';
 
             //pls ostylujcie jakoś ladnie pole do opisu, póki co tylko statycznie jest
             //i jak przeniesiecie style to jednak pamiętajcie o resize: none dla teaxtarea
-        
-        //koniec php
-        ?>	
-        
-    </div>	
-    
-    <div id="footer">	
-        footer		
-    </div>	
-    
+
+            //koniec php
+            ?>
+    </div>
 </div>
 
-<!-- skrypt z js ->
+<img class="img-fluid peach_vector-main" src="images/peach_vector.svg">
+<img class="img-fluid blue_vector-main" src="images/blue_vector.svg">
 
-<script type="text/javascript">
-    document.getElementById("redirect_add").onclick = function () {
-        location.href = "dziennik_dodaj_wpis.php";
-    };
-</script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
