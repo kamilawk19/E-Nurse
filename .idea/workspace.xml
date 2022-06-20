@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3234f2fd-9ac3-4a1b-93b5-d97e408fc7c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_01_2022_17_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_01_2022_17_43__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_01_2022_12_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_01_2022_12_42__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/choose_school.php" beforeDir="false" afterPath="$PROJECT_DIR$/front/choose_school.php" afterDir="false" />
+    <list default="true" id="3234f2fd-9ac3-4a1b-93b5-d97e408fc7c1" name="Changes" comment="front dodany plus poprawka w dziennik.php">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +41,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/front" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mmiel\Desktop\E-Nurse\E-Nurse\front" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,7 +77,58 @@
       <workItem from="1642698763647" duration="21000" />
       <workItem from="1643197275418" duration="4947000" />
       <workItem from="1643206587657" duration="686000" />
+      <workItem from="1655728199189" duration="6614000" />
     </task>
+    <task id="LOCAL-00001" summary="front + +">
+      <created>1655713248318</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655713248318</updated>
+    </task>
+    <task id="LOCAL-00002" summary="front dodany sprawdzic">
+      <created>1655714498621</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655714498621</updated>
+    </task>
+    <task id="LOCAL-00003" summary="front poprawiony">
+      <created>1655729549566</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655729549566</updated>
+    </task>
+    <task id="LOCAL-00004" summary="front poprawiony">
+      <created>1655732449087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655732449087</updated>
+    </task>
+    <task id="LOCAL-00005" summary="front poprawka">
+      <created>1655732716117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655732716117</updated>
+    </task>
+    <task id="LOCAL-00006" summary="front poprawka">
+      <created>1655733941852</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655733941852</updated>
+    </task>
+    <task id="LOCAL-00007" summary="front dodany plus poprawka w dziennik.php">
+      <created>1655734907557</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655734907557</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,5 +145,14 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge conf" />
+    <MESSAGE value="front + +" />
+    <MESSAGE value="front dodany sprawdzic" />
+    <MESSAGE value="front poprawiony" />
+    <MESSAGE value="front poprawka" />
+    <MESSAGE value="front dodany plus poprawka w dziennik.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="front dodany plus poprawka w dziennik.php" />
   </component>
 </project>
