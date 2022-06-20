@@ -92,30 +92,28 @@ if(!isset($_SESSION['zalogowany']))
             echo "</div>";
 
             //pobieram drugie imie, żeby uniknąć nieprzyjemnej sytuacji, ze jest dwóch uczniów o takim samym imieniu i nazwisku w klasie
-            echo "
-            <form action='../dziennik_validate_form.php' method='post'>
-                <div class="row">
-                    <div class="col-md-1 offset-md-1">
-                        <p class="journal_titles">Data:</p>
-                        <p class="journal_titles">Imię:</p>
-                        <p class="journal_titles">Nazwisko:</p>
-                        <p class="journal_titles">Klasa:</p>
-                    </div> 
-                    <div class='col-md-8 journal_form'>              
-                        <input type='datetime-local' id='date' name='date' value='".date('Y-m-d\TH:i')."'>
-                        <input type='text' id='klasa' name='klasa'>
-                        <input type='text' id='imie' name='imie'>
-                        <input type='text' id='nazwisko' name='nazwisko'>
-                    </div>
-                </div>
+            echo "<form action='../dziennik_validate_form.php' method='post'>
                 
+                <div class='col-md-1 offset-md-1'>
+                    <p class='journal_titles'>Tytuł:</p>
+                    <p class='journal_titles'>Uczeń:</p>
+                    <p class='journal_titles'>Klasa:</p>
+                    <p class='journal_titles'>Data:</p>
+                </div> 
+                <div class='col-md-8 journal_form'>              
+                <input type='datetime-local' id='date' name='date' value='".date('Y-m-d\TH:i')."'>
+                    <input type='text' id='klasa' name='klasa'>
+                    <input type='text' id='imie' name='imie'>
+                    <input type='text' id='imie2' name='imie2'>
+                    <input type='text' id='nazwisko' name='nazwisko'>
+                </div>
                 <label for='opis'>Opis</label><br>
                 <div class='col-md-12 journal_form journal_form_desc'>
-                    <textarea class="journal_buton_text_area" id='opis' name='opis' rows='10' required></textarea>
+                    <textarea id='opis' name='opis' rows='10' style='resize: none' required></textarea>
                 </div>
                 
                 <label for='podano'>Podano</label><br>
-                <textarea class="journal_buton_text_area" id='podano' name='podano' rows='4' ></textarea><br><br>
+                <textarea id='podano' name='podano' rows='4' style='resize: none'></textarea><br><br>
                 <div class='col-md-2 offset-md-5 list-buttons'>
                     <input type='submit' class='btn-blue--filled list-btn' value='Dodaj'>
                 </div> 
