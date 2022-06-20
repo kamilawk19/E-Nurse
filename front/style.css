@@ -27,7 +27,7 @@ h3{
     font-style: normal;
     font-weight: bold;
     font-size: 1.375rem;
-    line-height:  1.7rem;;
+    line-height:  1.8rem;;
     letter-spacing: -0.02em;
 }
 h4{
@@ -49,9 +49,22 @@ h5{
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
+h6{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
 p{
     font-family: Open Sans;
     font-size: 1.125rem;
+    color:#646464;
 }
 ul {
     list-style-type: none;
@@ -76,15 +89,13 @@ a:hover{
 }
 
 .btn-peach--filled{
-    width: 14.625rem;
-    height: 3.75rem;
-    padding-top: 0.2rem;
+    padding: 0.65rem 2rem 0.5rem 2rem;
     border: 0;
     border-radius: 50px;
     background: #FBC7A8;
     font-family: Overpass;
     font-weight: bold;
-    font-size: 1.375rem;
+    font-size: 1.2rem;
     color: white;
 }
 .btn-peach--filled:hover{
@@ -107,18 +118,29 @@ a:hover{
 }
 
 .btn-blue--filled{
-    padding: 0.75rem 1.5rem;
+    padding: 0.65rem 2rem 0.5rem 2rem;
     border: 0;
     border-radius: 50px;
     background: #CAE3F7;
     font-family: Overpass;
     font-weight: bold;
-    font-size: 1.375rem;
+    font-size: 1.2rem;
     color: white;
 }
 .btn-blue--filled:hover{
     background: #B8D9F4;
 }
+
+.btn-white{
+    height: 2.75rem;
+    width: 14rem;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 23px;
+    background-color: white;
+    color: #646464;
+}
+
 
 .btn-back{
     display: flex;
@@ -130,6 +152,14 @@ a:hover{
     width: 3.875rem;
     height: 1.5rem;
 }
+
+.list-btn{
+    font-size: 1rem;
+    margin: 0 1rem;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+}
+
 
 /* Navbar */
 .navbar{
@@ -168,11 +198,13 @@ a:hover{
     display: flex;
     gap: 3.125rem
 }
-.setting_img{
-    padding: 0.84rem 0;
+img.setting_img{
+    margin: 0.55rem 0;
+    max-height: 1.875rem;
 }
-.notiffication_img{
-    padding: 0.6rem 0;
+img.notiffication_img{
+    margin: 0.5rem 0;
+    max-height: 1.975rem;   
 }
 /* Login container */
 .background__container{
@@ -180,16 +212,15 @@ a:hover{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
     border-radius: 23px;
     background-color: white;
+    padding: 2rem;
 }
 .form{
-    padding: 10vh 0;
+    padding: 8vh 0;
     text-align: center;
 }
 .form h1{
-    padding-bottom: 3.25rem;
-}
-.form h3{
-    padding-bottom: 3.625rem;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
 }
 .form a{
     padding-bottom: 2.625rem;
@@ -252,7 +283,7 @@ a:hover{
 .update img{
     padding-left: 3vw;
     padding-bottom: 0.5rem;
-    max-height: 35rem;
+    max-height: 30rem;
 }
 
 /* Reset password */
@@ -321,14 +352,18 @@ header h3{
 .upcoming_events{
     text-align: center;
     display:block;
-    padding: 2rem;
 }
 .upcoming_event{
     display: flex;
     padding-top: 2rem;
 }
 .date{
-    display: block;    
+    display: block;  
+    padding: 0;  
+    padding-top: 0.5rem;
+}
+.date h2{
+    margin: 0;
 }
 .evet_title{
     text-align: left;
@@ -339,11 +374,11 @@ header h3{
     padding-left: 3rem;
 }
 .journal_main{
-    padding: 2rem;
     gap: 3vw;
 }
 .journal_main h2{
     padding-top: 0.2rem;
+    margin: 0;
 }
 .journal_main a{
     background-color: #FBC7A8;
@@ -356,7 +391,6 @@ header h3{
 }
 .recent_classes{
     display: block;
-    padding: 2.5rem;
     margin-top: 2rem;;
 }
 .recent__classes{
@@ -375,6 +409,7 @@ header h3{
     font-size: 0.9rem;
     margin-bottom: 0.4vw;
     padding: 0 0.5rem;
+    color: white;
 }
 #recent_class1{
     background-color: #6D9AC5;
@@ -389,4 +424,292 @@ header h3{
     font-weight: bold;
 }
 
+/* Classes */
+.classes{
+    padding: 1.5rem;
+}
+.sort_filtr{
+    display:flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.sort_filtr h3{
+    margin-top: 0.6rem;
+    color: #646464;
+}
+.level{
+    display: flex;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+.class{
+    width: 8.125rem;
+    height: 8.125rem;
+    padding: 0.35rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+}
+.class p{
+    font-size: 0.9rem;
+    margin-bottom: 0.4vw;
+    padding: 0 0.5rem;
+    color: white;
+}
+#class_0{
+    background-color: #568ABB;
+}
+#class_1{
+    background-color: #6697c2;
+}
+#class_2{
+    background-color: #7CA6CB;
+}
+#class_3{
+    background-color: #A7D0F1;
+}
+#class_4{
+    background-color: #B8D9F4;
+}
+#class_5{
+    background-color: #CAE3F7;
+}
+#class_6{
+    background-color: #FBC7A8;
+}
+#class_7{
+    background-color: #FCD9C5;
+}
+#class_8{
+    background-color: #FDE6D8;
+}
 
+/* Students List */
+.class_info{
+    color:#646464;
+}
+.class_info_{
+    display: flex;
+}
+.class_info_ p{
+    font-size: 1rem;
+}
+.info{
+    font-weight: bold;
+    margin-left: 1.5rem;
+    margin-right: 4vw;
+}
+
+.titles p{
+    font-size: 0.93rem;
+}
+.title{
+    text-align: center;
+}
+.student{
+    padding: 0;
+    padding-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+.student p{
+    font-size: 1rem;
+}
+.check-ups{
+    display: flex;
+    gap:1vw;
+}
+.list-buttons{
+    margin-top: 0.125rem;
+}
+
+/* Student */
+
+.student_blocks{
+    display: block;
+    margin-bottom: 1.75rem;
+}
+.student_blocks a{
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    margin-top: 1.25rem;
+}
+.student_blocks h2{
+    margin-bottom: 2rem;
+}
+
+.student_blocks_titles{
+    margin-bottom: 2rem;
+}
+.student_blocks_titles h2{
+    margin-bottom: 0;
+}
+.student_blocks_titles a{
+    margin-top: 0;
+}
+
+.student_info h2{
+    margin-bottom: 0.25rem;
+}
+.student_info p{
+    margin-top: 1.75rem;
+}
+.student_info_{
+    font-weight: bold;
+}
+
+.student_titles p{
+    font-size: 1rem;
+    text-align: center;    
+}
+.student_diseases_ p{    
+    padding: 0.75rem 1.5vw;
+    margin-left: 1.5vw;
+}
+.student_pe p{
+    padding: 0.75rem 1vw;
+    margin-left: 1vw;
+    text-align: center;    
+}
+.student_pe_date{
+    margin-left: 1vw;
+}
+
+/* Badanie przesiewowe */
+.bold_info{
+    font-weight: 600;
+}
+.bold_title{
+    font-weight: 700;
+}
+.badanie_group{
+    margin-top: 4rem;
+}
+.subtitle_name{
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
+.badanie_edit{
+    margin-top: 2.5rem;
+    margin-left: 3vw;
+}
+.badanie_edit_btn a{
+    padding: 0.85rem 3rem 0.7rem 3rem;
+}
+
+/* Badanie przesiewowe edit */
+
+.badanie_form input[type=text], .badanie_form input[type=number] {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 0.15rem;
+    padding-left: 0.5rem;
+    background: #FFFFFF;
+    border: 0;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    font-size: 1.125rem;
+    color: black;
+}
+
+.doctors label{
+    font-family: Open Sans;
+    font-size: 1.125rem;
+    color:#646464;
+}
+
+.checkbox_container {
+    display: block;
+    position: relative;
+    padding-left: 3.4rem;
+    padding-top: 0.4rem;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+  }
+  
+  /* On mouse-over, add a more grey box-shadow  */
+.checkbox_container:hover input ~ .checkmark {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+}
+  
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {
+    left: 16px;
+    top: 12px;
+    width: 8px;
+    height: 16px;
+    border: solid #646464;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox_container input:disabled ~ .checkmark{
+    background-color: #E5E5E5;
+}
+
+.just_checkbox .checkbox_container{
+    padding-bottom: 1.7rem;
+    margin-top: 1.35rem;
+}
+
+.just_checkbox input[type=text]{
+    margin-top: 1.2rem;
+}
+
+
+/* Dziennik */
+.journal_buttons{
+    margin-bottom: 1rem;
+}
+.journal_buton{    
+    width: 8.5rem;
+    font-weight: bold;
+    margin-right: 1vw;
+}
+.journal_buton-checked{
+    box-shadow: 0px 4px 40px #A7D0F1;
+}
+
+.journal_p{
+    padding: 0;
+}

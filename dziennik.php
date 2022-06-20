@@ -150,7 +150,13 @@
 				// dodatkowy warunek do zaimplementowania w przyszłości : jeśli zmienna $x jest nieustawiona, wróć do wyboru szkoły.php		
 				
 				echo '<button id="redirect_add" class="submit-button" >Dodaj wpis</button><br>';
-				echo "<h2>Dziennik codzienny </h2>";
+				echo '<div class="dropdown">
+				<button>Generuj plik</button>
+				<div class="dropdown-content">
+				<a href="gen.php/?t=1">Z dzisiaj</a>
+				<a href="gen.php/?t=2">Z tego miesiąca</a>
+				<a href="gen.php/?t=3">Z całego okresu</a></div></div>';
+				echo "<h2>dziennik codzienny </h2>";
 
 				for($i=0; $i<count($id_klasy);$i++){
 					if($id_klasy[$i]!="NULL"){
