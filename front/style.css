@@ -713,3 +713,25 @@ header h3{
 .journal_p{
     padding: 0;
 }
+
+.journal_titles{
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+
+}
+.journal_form input[type=text], .journal_form input[type=number], .journal_form input[type=date] {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: #FFFFFF;
+    border: 0;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    font-size: 1.125rem;
+    color: black;
+}
+
+.journal_form_desc input[type=text]{
+    height: 5rem;
+    margin-bottom: 2rem;
+}
